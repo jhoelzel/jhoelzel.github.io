@@ -14,7 +14,7 @@ In order to secure your server even further, you could block any external IP Adr
 
 This proves to be an effective way to block DOS that can be caught by cloudflare, which lets face it, will be better at it as if we would be able to ourselfs.
 
-## Find all of cloudflare IPS
+## Find all of cloudflare IP-Ranges
 
 Lukily, cloudflare has got your covered! Please check out <https://www.cloudflare.com/ips> and you will find a nice sorted list of the IP Ranges that cloudflare uses.
 This brings us the advantage to use all of them in our server configuration, but cloudflare even goes one step further and provides them for you as txt files for easy querying.
@@ -63,7 +63,7 @@ Great now we are using cloudflare to its fullest and are blocking every other tr
 
 ## Rescue your system and allow traffic from other IPs again
 
-So it happened, cloudflare decided that you validate their terms and have dropped you. Yikes. No matter the reason behind it, your servers will now be longer reachable from the internet besides through your VPNs.
+So it happened, cloudflare decided that you validate their terms and have dropped you. Yikes. No matter the reason behind it, your servers will now no longer be reachable from the internet besides through your VPNs.
 In order to stop this from happening, we need to drop the rules we have put up before:
 
 ``` console
@@ -81,5 +81,6 @@ and bam. Your servers should be back in business.
 ### Sources
 
 <https://www.cloudflare.com/ips>
+
 <https://support.cloudflare.com/hc/en-us/articles/200169166-How-do-I-whitelist-CloudFlare-s-IP-addresses-in-iptables->
 
