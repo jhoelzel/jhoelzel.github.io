@@ -3,7 +3,7 @@ layout: post
 title: Only allowing cloudflare servers ips for your server
 subtitle: and to secure your server from other threats.
 categories: hints
-tags: [cloudflare, IPV4, IPV6]
+tags: cloudflare, IPV4, IPV6
 ---
 
 The chances are high that if you are using cloudflare to proxy your servers, that you will not have much traffic on them that is not originating from cloudflare.
