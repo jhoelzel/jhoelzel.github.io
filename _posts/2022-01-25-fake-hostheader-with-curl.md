@@ -3,13 +3,18 @@ layout: post
 title: Using curl with a fake host header
 subtitle: Query resources under different hostnames
 categories: hints
-tags: [kubectl, more, cli]
+tags: [curl, cli]
 ---
 
-Sometimes kubectl will return output that is just to long to handle. With some integrated terminals cutting the output after a certain lenth (Iam looking at you Visual Studio Code), its nice to be able to scroll throught kubetl output much more easily.
-
-For this usecase the more tool is easily used <https://wiki.ubuntuusers.de/more/>
+In order to work with fake resources on your localhost you sometimes have to fake your hostname.
+With curl you can simply do that by providing your own domain resolution into the request:
 
 ``` console
 $ curl --resolve yourdomain.com:443:127.0.0.1 https://yourdomain.com/
+```
+
+Alternativly you can do the same thing on port 80 without https:
+
+``` console
+$ curl --resolve yourdomain.com:80:127.0.0.1 http://yourdomain.com/
 ```
