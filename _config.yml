@@ -3,10 +3,12 @@ title: "{ Hoelzel.IT }"
 email: your-email@domain.com
 author: Johannes Hölzel
 
-copyright: "Random ramblings of an IT Veteran for future documentation purposes. © {currentYear} {author} |  No guarantess, please use everyhting at your own discretion."
+copyright: >-
+  Random ramblings of an IT Veteran for future documentation purposes. 
+  © {currentYear} {author} |  No guarantess, please use everyhting at your own discretion."
 description: >- # this means to ignore newlines until "baseurl:"
   Random ramblings of an IT Veteran for future documentation purposes.
-  
+
 #baseurl: "" # the subpath of your site, e.g. /blog
 url: "jhoelzel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "" # the favicon for your site
@@ -34,7 +36,7 @@ night_mode: "auto"
 
 # Page default value
 defaults:
- - home:
+  - home:
     heading: "DocOps by Johannes Hölzel"
     subheading: "Wer schreibt der bleibt! (he who documents stays) - german wisdom"
     banner: "https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
