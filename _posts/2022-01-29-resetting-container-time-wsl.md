@@ -24,4 +24,4 @@ In order to fix your container time, which inherited by the doker-desktop contai
 $ wsl -d docker-desktop -e /sbin/hwclock -s
 ```
 
-After that your system time should be updated and on time again.
+After that your container time should be updated and on time again.
