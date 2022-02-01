@@ -1,5 +1,6 @@
 ---
 layout: about
+title: About me
 ---
 
 <h1 align="center">Hi 👋, I'm Johannes</h1>

@@ -33,6 +33,7 @@ header_pages:
   - categories.html
   - tags.html
   - about.md
+  - google.de
 
 code_badge:
   enabled: "true"
