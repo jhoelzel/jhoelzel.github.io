@@ -1,3 +1,7 @@
+---
+layout: about
+---
+
 <h1 align="center">Hi 👋, I'm Johannes</h1>
 <h3 align="center">I talk to humans and machines and specialize in golang, kubernetes as well as automating everything!</h3>
 <p align="center">
