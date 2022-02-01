@@ -47,8 +47,11 @@ defaults:
   home:
     heading: "DocOps by Johannes Hölzel"
     subheading: "Wer schreibt der bleibt! (he who documents stays) - german wisdom"
-    banner: "https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-
+    banner: "https://jhoelzel.github.io/img/blog_cover.png"
+  about:
+    heading: "DocOps by Johannes Hölzel"
+    subheading: "Wer schreibt der bleibt! (he who documents stays) - german wisdom"
+    banner: "https://jhoelzel.github.io/img/blog_cover.png"
 # Build settings
 # highlighter: none
 markdown: kramdown
