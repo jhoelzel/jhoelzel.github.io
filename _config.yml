@@ -34,6 +34,13 @@ night_mode: "auto"
 #   - tags.html
 #   - about.md
 
+code_badge:
+  enabled: "true"
+  color: "#fff"
+  background_color: "#ff4e00"
+  text_transform: "uppercase"  # ("uppercase", "lowercase", "capitalize")
+
+paginate: 5
 
 # Page default value
 defaults:
