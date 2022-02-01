@@ -6,9 +6,9 @@ categories: hints
 tags: [kubectl, more, cli]
 ---
 
-Sometimes kubectl will return output that is just to long to handle. With some integrated terminals cutting the output after a certain lenth (Iam looking at you Visual Studio Code), its nice to be able to scroll throught kubetl output much more easily.
+Sometimes kubectl will return output that is just to long to handle. With some integrated terminals cutting the output after a certain length (Iam looking at you Visual Studio Code), its nice to be able to scroll throughout kubectl output much more easily.
 
-For this usecase the more tool is easily used <https://wiki.ubuntuusers.de/more/>
+For this use case the more tool is easily used <https://wiki.ubuntuusers.de/more/>
 
 ```
 # with more you can easily scroll through the kubectl output:

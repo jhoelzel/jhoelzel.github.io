@@ -13,7 +13,7 @@ With curl you can simply do that by providing your own domain resolution into th
 $ curl --resolve yourdomain.com:443:127.0.0.1 https://yourdomain.com/
 ```
 
-Alternativly you can do the same thing on port 80 without https:
+Alternatively you can do the same thing on port 80 without https:
 
 ``` console
 $ curl --resolve yourdomain.com:80:127.0.0.1 http://yourdomain.com/

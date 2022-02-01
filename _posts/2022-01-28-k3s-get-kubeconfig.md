@@ -34,8 +34,8 @@ users:
     client-key-data: <redacted>=
 ```
 
-The keen observer will notice that, apart from my redactions, the IP-Adress of the cluster is set to 127.0.0.1 and therefore you will not be able to connect to your control-plane from your localhost.
-Therefore we need to update its IP. 
+The keen observer will notice that, apart from my redactions, the IP-Address of the cluster is set to 127.0.0.1 and therefore you will not be able to connect to your control-plane from your localhost.
+Therefore we need to update its IP.
 
 **Please note that you should never change the file in the folder itself, because your cluster will be using it communicate**
 
@@ -51,7 +51,7 @@ and to then change the IP myself locally:
 $ sed -i -e 's/127.0.0.1/${self.ipv4_address}/g' ./kubeconfig.yaml
 ```
 
-After that your kubeconfig is ready to go. ( Athing to note is that now is the point to change the cluster or context names locally to easier identify them later on)
+After that your kubeconfig is ready to go. ( A thing to note is that now is the point to change the cluster or context names locally to easier identify them later on)
 The easiest way to use it with kubectl is to export the kubeconfigpath:
 
 ``` console

@@ -36,18 +36,18 @@ $ for i in `curl https://www.cloudflare.com/ips-v6`; do ip6tables -I INPUT -p tc
 IPV4:
 
 ``` console
-$ iptables -I INPUT -p tcp -m multiport --dports http,https -s <YOUR.VPN.IP.v6> -j ACCEPT;
+$ iptables -I INPUT -p tcp -m multiport --dports http,https -s <YOUR.VPN.IP.v5> -j ACCEPT;
 ```
 
 IPV6:
 
 ``` console
-$ ip6tables -I INPUT -p tcp -m multiport --dports http,https -s <YOUR.VPN.IP.v4> -j ACCEPT;
+$ ip6tables -I INPUT -p tcp -m multiport --dports http,https -s <YOUR.VPN.IP.v6> -j ACCEPT;
 ```
 
 ## Drop other sources of traffic
 
-After we allowed cloudflare accces to our servers, we still need to block any other incomming pacakage:
+After we allowed cloudflare accces to our servers, we still need to block any other incoming package:
 
 ``` console
 $ iptables -A INPUT -p tcp --dport http,https -j DROP
@@ -59,7 +59,7 @@ and the same is true for IPV6
 $ ip6tables -A INPUT -p tcp --dport http,https -j DROP
 ```
 
-Great now we are using cloudflare to its fullest and are blocking every other traffic that might reach our servers. It is however important to know, that now you will not be able to reach your server without cloudflare. Just in case I am goingto show you a little bit of firefighting, should cloudflare decided to drop traffic to your servers.
+Great now we are using cloudflare to its fullest and are blocking every other traffic that might reach our servers. It is however important to know, that now you will not be able to reach your server without cloudflare. Just in case I am going to show you a little bit of firefighting, should cloudflare decided to drop traffic to your servers.
 
 ## Rescue your system and allow traffic from other IPs again
 
@@ -83,4 +83,3 @@ and bam. Your servers should be back in business.
 <https://www.cloudflare.com/ips>
 
 <https://support.cloudflare.com/hc/en-us/articles/200169166-How-do-I-whitelist-CloudFlare-s-IP-addresses-in-iptables->
-
