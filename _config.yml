@@ -5,12 +5,12 @@ author: Johannes Hölzel
 
 copyright: >-
   Random ramblings of an IT veteran for future documentation purposes. <br />
-  © {currentYear} {author} <br /> No guarantes, please use everyhting at your own discretion.
+  © {currentYear} {author} <br /> No guarantees, please use everything at your own discretion.
 description: >- # this means to ignore newlines until "baseurl:"
   Random ramblings of an IT veteran for future documentation purposes.
 
 #baseurl: "" # the subpath of your site, e.g. /blog
-url: "jhoelzel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "www.hoelzel.it" # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "" # the favicon for your site
 
 # Night/Dark mode
@@ -32,7 +32,6 @@ header_pages:
   - categories.html
   - tags.html
   - about.md
-  - www.linkedin.com/in/johannes-hölzel
 
 code_badge:
   enabled: "true"
