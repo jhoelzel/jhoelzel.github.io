@@ -29,11 +29,10 @@ night_mode: "auto"
 # this and add the path to the pages in order as they should show up
 header_pages:
   - index.html
-  - archives.html
   - categories.html
   - tags.html
   - about.md
-  - https://google.de
+  - www.linkedin.com/in/johannes-hölzel
 
 code_badge:
   enabled: "true"
