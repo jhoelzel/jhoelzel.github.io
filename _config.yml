@@ -45,11 +45,11 @@ paginate: 5
 defaults:
   home:
     heading: "DocOps by Johannes Hölzel"
-    subheading: "Wer schreibt der bleibt! (he who documents stays) - german wisdom"
+    subheading: "Wer schreibt der bleibt! (he who documents prevails) - german wisdom"
     banner: "https://jhoelzel.github.io/img/blog_cover.png"
   about:
     heading: "DocOps by Johannes Hölzel"
-    subheading: "Wer schreibt der bleibt! (he who documents stays) - german wisdom"
+    subheading: "Wer schreibt der bleibt! (he who documents prevails) - german wisdom"
     banner: "https://jhoelzel.github.io/img/blog_cover.png"
 # Build settings
 # highlighter: none

@@ -3,7 +3,7 @@ layout: post
 title: Patching YAML with kustomize
 subtitle: while setting up the hetzner cloud manager
 categories: kubernetes
-tags: [kubernetes, cloud-manager, kustomize]
+tags: [kubernetes, controller-manager, kustomize]
 ---
 
 Often I see myself confronted with the problem of customizing a set of yaml files from a third party. Helm solves this problem with its Chart integration and allows rich modification of the underlying yaml through the definition of values.
@@ -171,7 +171,7 @@ and our modified cloud controller will be applied to our cluster. Fully modified
 As you can see this brings a lot of power to yaml kustomization and therefore I love it.
 
 In the future I might create another post in which I will explain the use and advantage of overlays, but that is for next time.
-For now, enjoy patching your deployments with kustmize.
+For now, enjoy patching your deployments with kustomize.
 
 
 ## Sources
