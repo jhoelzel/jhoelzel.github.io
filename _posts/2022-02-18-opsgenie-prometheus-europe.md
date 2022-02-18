@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring Opsgenie in the EU
-subtitle: or how I almost cired because I was using the wrong API
+subtitle: or how I almost cried because I was using the wrong API
 categories: monitoring
 tags: [kubernetes, opsgenie, monitoring, prometheus]
 ---
@@ -22,7 +22,7 @@ or even their own documentation
 
 In General the entire operation is very simple:
 
-- get your API key from the dashboard unter teams -> your team -> integrations 
+- get your API key from the dashboard under teams -> your team -> integrations 
 - get your team id: the simplest way i have found is to simply copy it from the querystring "?teamId=" of your dashboard when you create your integration
 - paste both into the alert manager config  and adapt your configs and done.
 
@@ -38,7 +38,7 @@ route:
   group_by: [alertname]
   repeat_interval: 24h
   routes:
-    - receiver: "slack-notifications"
+    - receiver: "opsgenie"
       matchers:
         - severity=~"major"
     - receiver: "opsgenie"
@@ -113,7 +113,7 @@ So I went to bed and meditated over it at night. Until it the next morning, with
 
 "https://MyApp.app.eu.opsgenie.com/" do you see it yet?
 
-The client I was helping with is an EU customer and therefore Atlassian would put them on european servers, which to my suprise, don't talk to each other.
+The client I was helping with is an EU customer and therefore Atlassian would put them on european servers, which to my surprise, don't talk to each other.
 
 All you need to do is change the Opsgenie API url to european servers: 
 
