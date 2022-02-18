@@ -1,10 +1,10 @@
----
+<!-- ---
 layout: post
 title: The perfect azure development container
 subtitle: including alpine, azure-cli, terraform, golang, kubectl, helm and all your friends.
 categories: hints
 tags: [alpine, azure-cli, kubernetes, terraform, golang, kubectl, helm]s
----
+--- -->
 
 While working with azure I think I might have found my perfect setup for azure.
 As a Windows user with a trusty surface book, a WSL based setup is what I used for many years and at times I have simply rented a VPS when using working with clients.
