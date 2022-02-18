@@ -27,7 +27,7 @@ In General the entire operation is very simple:
 - paste both into the alert manager config  and adapt your configs and done.
 
 so in the end it will looks something like this:
-
+{% raw  %}
 ``` Alertmanager.Yml
 global:
   resolve_timeout: 1m
@@ -92,6 +92,7 @@ receivers:
           - id: "<teamid>"
             type: "team"
 ```
+{% endraw %}
 
 Now if you are not from the eu you are done. But if you are you will get a greeting like this in the alertmanager pod logs:
 
@@ -122,7 +123,7 @@ All you need to do is change the Opsgenie API url to european servers:
 ```
 
 And you would be up and running. Making our final config look like this:
-
+{% raw  %}
 ``` Alertmanager.Yml
 global:
   resolve_timeout: 1m
@@ -188,6 +189,7 @@ receivers:
           - id: "<teamid>"
             type: "team"
 ```
+{% endraw %}
 
 And Boom, you are in business. You will notice that pretty quickly because everybody in your team that is on the on call list will no receive live emails from opsgenie.
 
