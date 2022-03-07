@@ -10,7 +10,7 @@ Hey guys today is more a short rant than anything but my goal was to configure O
 
 All that sounds easy and quick to do especially when you red tutorials like:
 
-<https://kb.vshn.ch/vshnsyn/how-tos/Opsgenie.html>
+<https://kb.vshn.ch/vshnsyn/how-tos/opsgenie.html>
 
 Or look on github
 
