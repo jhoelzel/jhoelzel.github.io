@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Remapping the Office key
-subtitle: or how to make **Microsoft Ergonomic keyboard for business** actually useful with autohotkey
+subtitle: or how to make **Microsoft Ergonomic keyboard for business** actually useful with AutoHotkey
 categories: cli
-tags: [office-key, AutoHotkey, hints, windows,smiley-key]
+tags: [office-key, AutoHotkey, hints, windows, emoji-key]
 ---
 
 ## finding a new keyboard
@@ -16,10 +16,10 @@ Anyway this has lead me to do some research in keyboards and I finally settled o
 It looks and feels super solid and like the sculpt line, fits nicely into my setup. The biggest upside, besides its ergonomics, is wired.
 Don't get me wong, I absolutely would have went for a wired sculpt, but as tradition with microsoft, such a thing does not exists, and even though I still struggle a little bit with the ergonomic form factor sometimes I can notice that wired keyboards just react so much better to inputs or at least they do compared to my trusty sculpt.
 
-## discovering the office and the smiley key
+## discovering the office and the emoji key
 
-So, after I unwrapped and tested the keyboard I noticed a couple of new keys but the two that I saw first where the one with an office flag and one with a smiley.
-Great I thought, more hotkeys for me and pondered on. Pressing the smiley key would open the windows 11 smiley menu, which lets you select, copy and paste smileys.
+So, after I unwrapped and tested the keyboard I noticed a couple of new keys but the two that I saw first where the one with an office flag and one with a emoji.
+Great I thought, more hotkeys for me and pondered on. Pressing the emoji key would open the windows 11 emoji menu, which lets you select, copy and paste emojis.
 While I appreciate the effort here microsoft, its just not something that I normally do in my workflow.
 The office key opens up office.com or the installed office on your computer, which didn't really work for my office version and redirected me to the website anyways.
 Also not something I am going to do very often.
@@ -111,7 +111,7 @@ Send ^!+W
 return
 ```
 
-And that is taken care of two. But now again, we have two dead keys we can not do anything else with.
+And that is taken care of too. But now again, we have two dead keys we can not do anything else with.
 For me I decided that I would rather start different applications with those hotkeys so I went online and found this gist:
 <https://gist.github.com/teglsbo/1257230>
 
@@ -146,7 +146,7 @@ But now for the sad part.
 
 ## The office key itself can not be reassigned
 
-Yes you read that right. We got rid of the smiley but the fact that the office key is a super key, makes it impossible to be simply assigned.
+Yes you read that right. We got rid of the emoji but the fact that the office key is a super key, makes it impossible to be simply assigned.
 You might want to try something like this:
 
 ```
