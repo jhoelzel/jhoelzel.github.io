@@ -3,13 +3,13 @@ layout: post
 title: ZSH slow response times
 subtitle: or how big repositories slow down your theme
 categories: cli
-tags: [zsh, tips, cli, git, theme]
+tags: [zsh, tips, cli, git, zsh-theme]
 ---
 
 Today I found myself with a slow unresponsive zsh console session in certain folders and I spent some time figuring out why.
 What happen was that every input to my console took like 20 seconds to finish and it was having an impact on my work.
 
-It was driving me mad, I rebuild my dev container, rebooted to no avail until I realized: ** the size of the Repo has an impact on my terminal? **
+It was driving me mad, I rebuild my dev container, rebooted to no avail until I realized: **the size of the Repo has an impact on my terminal?**
 Turns out that is exactly what happened. And here is why:
 
 ## Themes and Git Info
@@ -48,5 +48,7 @@ With Visual Studio code, dirty tracking is already set up for me in a separate e
 ### Sources
 
 <https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/git.zsh>
+
 <https://stackoverflow.com/questions/12765344/oh-my-zsh-slow-but-only-for-certain-git-repo>
+
 <https://blog.carbonfive.com/writing-zsh-themes-a-quickref/>
