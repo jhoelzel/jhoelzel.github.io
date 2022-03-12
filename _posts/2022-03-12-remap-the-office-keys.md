@@ -196,3 +196,12 @@ return
 With these and the AutoHotkey documentation you should be all set to set up your specialized environment for yourself.
 In the end I have to clearly point out that I would really have expected simple and clear software from Microsoft for this, but maybe we just don't know how to use keyboards yet and need to iterate more at the Microsoft lab ;)
 
+### Sources
+
+<https://www.howtogeek.com/445318/how-to-remap-the-office-key-on-your-keyboard/>
+
+<https://github.com/microsoft/PowerToys/issues/3194>
+
+<https://en.wikipedia.org/wiki/Super_key_(keyboard_button)>
+
+<https://www.autohotkey.com/docs/>
