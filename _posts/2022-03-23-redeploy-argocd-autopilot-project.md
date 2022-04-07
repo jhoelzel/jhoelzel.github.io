@@ -57,7 +57,8 @@ $ cd argocd-simpleapp
 First we start with installing Argo itself, after that we redeploy our root.yaml application which will pick up on our existing manifests:
 
 ```
-$ kustomize build bootstrap/argo-cd | kubectl apply -f -
+$ kubectl create namespace argocd
+$ kubectl kustomize bootstrap/argo-cd | kubectl apply -f -
 $ kubectl apply -f bootstrap/argo-cd.yaml
 $ kubectl apply -f bootstrap/root.yaml
 ```
