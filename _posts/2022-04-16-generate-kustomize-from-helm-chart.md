@@ -6,7 +6,7 @@ categories: helm
 tags: [helm, kustomize, kubernetes]
 ---
 
-Today we are convertinga helm chart to an actual kustomize deployment.
+Today we are converting a helm chart to an actual kustomize deployment.
 
 ## using Kustomize built-in plugin
 
@@ -80,8 +80,7 @@ func main() {
     settings := cli.New()
 
     actionConfig := new(action.Configuration)
-    // You can pass an empty string instead of settings.Namespace() to list
-    // all namespaces
+    // You can pass an empty string instead of settings.Namespace() to list all ns
     if err := actionConfig.Init(settings.RESTClientGetter(), settings.Namespace(), os.Getenv("HELM_DRIVER"), log.Printf); err != nil {
         log.Printf("%+v", err)
         os.Exit(1)
