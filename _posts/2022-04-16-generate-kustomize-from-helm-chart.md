@@ -204,3 +204,13 @@ $ helm search repo kubecost/cost-analyzer --versions
 
 Et voila, you should be able to convert your helm charts tzo kustomizations without any problems.
 
+### adding all files to your kustomization.yaml
+
+if you are having a lot of files form a helm chart, it might take you a while to add them all to your kustomization.yaml.
+The easiest way to solve this, was with find:
+
+``` Console
+$ find ./output
+```
+
+

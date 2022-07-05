@@ -9,6 +9,17 @@ tags: [wsl, time-problems]
 Often after hibernation your docker containers will be out of sync, which will create problems with everything expiration based.
 I experienced this problem, after my laptop came out of hibernation and I had just setup a fresh kubernetes cluster, which, because of its cert-based auth, showed that my certificate was set to the future and therefore I was not able to authenticate myself.
 
+
+## UPDATE:
+
+The core issue seems to be fixed fixed by the 5.10.16.3 WSL2 kernel release, which you can update to  with
+
+``` powershell
+$ wsl --update
+```
+
+## Original:
+
 This quick fix will update the time in your local docker desktop container which should be using wsl and Windows.
 It is using hwclock:
 
