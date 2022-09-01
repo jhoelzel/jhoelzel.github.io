@@ -17,7 +17,7 @@ What started out as WordPress ans ASP.NET agency with server hosting in 2007 has
 
 All this makes me perfect if you are looking for someone with seniority, that is flexible, plays well with others but also likes to get his hands dirty. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
-## some kubernetes projects
+### kubernetes experience includes
 
 Kubernetes cluster types:
 
@@ -60,7 +60,7 @@ Interesting things:
 - Cost management depending on kubecost
 
 
-Projects with:
+### general experience
 
 - Fullstack (Frontend, Backend, APIs, Daemons, Operators, Infrastructure-Orchestration)
 - Favorites: Golang, JavaScript, PHP, C#
@@ -72,7 +72,7 @@ Projects with:
 - Jira / Redmine / Trello
 
 
-## You can reach me on LinkedIn
+### You can reach me on LinkedIn
 
 [![Linkedin](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](http://www.hoelzel.it/)
 
