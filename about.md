@@ -39,7 +39,7 @@ Distributions:
 - Rancher desktop
 - Harvester
 
-Created operators for:
+Created operators:
 
 - MySQL DB deployments
 - Application deployments
