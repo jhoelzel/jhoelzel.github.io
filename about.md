@@ -21,8 +21,8 @@ All this makes me perfect if you are looking for someone with seniority, that is
 
 Kubernetes cluster types:
 
-- bare-metal
-- AKS
+:white_check_mark: bare-metal
+:white_check_mark: AKS
 - EKS
 - Hetzner-cloud
 - Edge server
