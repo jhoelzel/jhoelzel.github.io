@@ -21,43 +21,43 @@ All this makes me perfect if you are looking for someone with seniority, that is
 
 Kubernetes cluster types:
 
-[X] bare-metal
-[X] AKS
-[X] EKS
-[X] Hetzner-cloud
-[X] Edge server
-[X] Single-Node
-[X] Multi-node
-[X] Multi-node, multi AZ
+- bare-metal
+- AKS
+- EKS
+- Hetzner-cloud
+- Edge server
+- Single-Node
+- Multi-node
+- Multi-node, multi AZ
 
 Distributions:
 
-[X] Vanilla Kubernetes
-[X] K3S
-[X] Rancher RKE
-[X] Micro-k8s
-[X] Rancher desktop
-[X] Harvester
+- Vanilla Kubernetes
+- K3S
+- Rancher RKE
+- Micro-k8s
+- Rancher desktop
+- Harvester
 
 Created operators for:
 
-[X] MySQL DB deployments
-[X] Application deployments
-[X] Annotation of existing services
-[X] Scaling of deployments depending on the time and day
+- MySQL DB deployments
+- Application deployments
+- Annotation of existing services
+- Scaling of deployments depending on the time and day
 
 Interesting things:
 
-[X] CSI compliant bare metal clusters
-[X] IPV6/IPV4/dualstack bare-metal clusters with Calico
-[X] Cluster to cluster migrations
-[X] Helm to kustomize migrations
-[X] automated dns and certificates (certmanager/externaldns)
-[X] OIDC Login for the cluster and its applications
-[X] Deployment of VOIP Applications to kubernetes
-[X] GitOps with Gitlab, Github, bitbucket, ArgoCD
-[X] Bare-metal ingress load balancing with ha-proxy and Traefik
-[X] Cost management depending on kubecost
+- CSI compliant bare metal clusters
+- IPV6/IPV4/dualstack bare-metal clusters with Calico
+- Cluster to cluster migrations
+- Helm to kustomize migrations
+- automated dns and certificates (certmanager/externaldns)
+- OIDC Login for the cluster and its applications
+- Deployment of VOIP Applications to kubernetes
+- GitOps with Gitlab, Github, bitbucket, ArgoCD
+- Bare-metal ingress load balancing with ha-proxy and Traefik
+- Cost management depending on kubecost
 
 
 Projects with:
