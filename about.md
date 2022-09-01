@@ -17,17 +17,58 @@ What started out as WordPress ans ASP.NET agency with server hosting in 2007 has
 
 All this makes me perfect if you are looking for someone with seniority, that is flexible, plays well with others but also likes to get his hands dirty. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
-## I have done projects with
+## some kubernetes projects
+
+Kubernetes cluster types:
+
+[X] bare-metal
+[X] AKS
+[X] EKS
+[X] Hetzner-cloud
+[X] Edge server
+[X] Single-Node
+[X] Multi-node
+[X] Multi-node, multi AZ
+
+Distributions:
+
+[X] Vanilla Kubernetes
+[X] K3S
+[X] Rancher RKE
+[X] Micro-k8s
+[X] Rancher desktop
+[X] Harvester
+
+Created operators for:
+
+[X] MySQL DB deployments
+[X] Application deployments
+[X] Annotation of existing services
+[X] Scaling of deployments depending on the time and day
+
+Interesting things:
+
+[X] CSI compliant bare metal clusters
+[X] IPV6/IPV4/dualstack bare-metal clusters with Calico
+[X] Cluster to cluster migrations
+[X] Helm to kustomize migrations
+[X] automated dns and certificates (certmanager/externaldns)
+[X] OIDC Login for the cluster and its applications
+[X] Deployment of VOIP Applications to kubernetes
+[X] GitOps with Gitlab, Github, bitbucket, ArgoCD
+[X] Bare-metal ingress load balancing with ha-proxy and Traefik
+[X] Cost management depending on kubecost
+
 
 Projects with:
-- Fullstack (Frontend, Backend, APIs, Daemons, cli)
+
+- Fullstack (Frontend, Backend, APIs, Daemons, Operators, Infrastructure-Orchestration)
 - Favorites: Golang, JavaScript, PHP, C#
-- Cloud: AWS, Azure, Hetzner, OVH, Bare-Metal
-- Databases: MySQL , MSSQL, PostgreSQL, TimeScaleDB, Redis
+- Cloud: AWS, Azure, Hetzner, OVH, Contabo, Bare-Metal
+- Databases: MySQL , MSSQL, PostgreSQL, TimeScaleDB, Redis, MongoDB
 - DevOps: Ansible, Puppet, Terraform, Argo CD, Rancher
-- Server: Kubernetes, Docker (Swarm), Bare-Metal , Fargate, Serverless
-- SEO: Campaigns / Tracking / Optimization
-- Location Networking, VPN (Wire guard, Software, MS-VPN)
+- Server: Kubernetes, k3s, K3OS, Harvester, Docker (Swarm), Bare-Metal , Serverless
+- Location Networking, VPN (Wireguard, Software, MS-VPN)
 - Jira / Redmine / Trello
 
 
