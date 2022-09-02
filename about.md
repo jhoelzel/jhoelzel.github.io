@@ -74,5 +74,5 @@ Interesting things:
 
 ### You can reach me on LinkedIn
 
-[![Linkedin](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](http://www.hoelzel.it/)
+[![Linkedin](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/johannes-h%C3%B6lzel)
 
