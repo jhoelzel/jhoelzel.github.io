@@ -90,8 +90,8 @@ There you have it, comparing differences the almost easy way. The most simple so
 In this case you can easily log all files separately using kustomize with:
 
 ``` Console
-$ diff kubectl kustomize /var/workspace/tmp/simpleapp/kube-manifests/kustomize/overlays/dev > dev.log
-$ diff kubectl kustomize /var/workspace/tmp/simpleapp/kube-manifests/kustomize/overlays/prod > prod.log
+$ kubectl kustomize /var/workspace/tmp/simpleapp/kube-manifests/kustomize/overlays/dev > dev.log
+$ kubectl kustomize /var/workspace/tmp/simpleapp/kube-manifests/kustomize/overlays/prod > prod.log
 ```
 
 And then use your favorite editor to compare files.
