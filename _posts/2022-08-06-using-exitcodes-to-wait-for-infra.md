@@ -10,7 +10,7 @@ I am working with a lot infrastructure and often need to execute commands after 
 
 This is especially the case when you are "terraforming" or "ansibleling" bare metal clusters and would like the your backup cluster to provision itself completely.
 
-The easiest way, to achieve this is to make use of the return code of the ping command.
+The easiest way to achieve this, is to make use of the return code of the ping command.
 
 ## What are return codes
 
@@ -21,7 +21,7 @@ You may find a list of common return codes for nix based systems here <https://s
 
 ## Return codes as variables
 
-You can retrieve them after code has been executed. In this example after grep has run:
+You can retrieve them, after code has been executed. In this example after grep has run:
 
 ``` Bash
 grep -q -w "mystring" "${FILE}"
@@ -98,7 +98,7 @@ So let us adapt our sample to use ping instead of grep:
 #!/bin/bash
 # we dont want our first loop to succeed directly, so we declare the variable
 pingreturncode=1
-while [ $grepreturncode -neq 0 ]; do
+while [ $pingreturncode -neq 0 ]; do
     # lets execute our check
     ping "${HOST}"
     # and save it into our variable
@@ -109,5 +109,5 @@ done
 # do something
 ```
 
-And there we go, if our host is reachable (the return code of the ping command does equal 0 for success), it will execute the code.
+And there we go. If our host is reachable (the return code of the ping command does equal 0 for success), it will execute the code.
 Otherwise it will loop until the end of time in one minute steps ;)
