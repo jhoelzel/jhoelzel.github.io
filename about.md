@@ -11,7 +11,7 @@ As consultant and developer I provide services from DevOps to application develo
 
 I grew up with the internet, uploaded my first websites to geocities, was tech-admin of a lot of bulletin boards and have been doing professional code since 2003. After trying to build my first start-up in 2006 I realized that they just won’t come only because I built it. Therefore, I have a bachelor economical psychology, which helps me immensely with team leadership and communication but also allows me to view the product from multiple perspectives.
  
-What started out as WordPress ans ASP.NET agency with server hosting in 2007 has long since evolved into full service consultancy and freelancing services with clients throughout the globe. I started working when Servers where still mostly dedicated, have lived the revolution of virtual servers, made a short stop at serverless tech and am now invested in the kubernetes ecosystem and its containers. 
+What started out as WordPress and ASP.NET agency with server hosting in 2007 has long since evolved into full service consultancy and freelancing services with clients throughout the globe. I started working when Servers where still mostly dedicated, have lived the revolution of virtual servers, made a short stop at serverless tech and am now invested in the kubernetes ecosystem and its containers. 
 
 **My preferred clouds are Azure and AWS**, but I have worked on others **and** also like to tame **bare-metal** and everything in-between. I love solving difficult issues and have worked on multi cloud deployments before.
 
@@ -49,16 +49,25 @@ Created operators:
 Interesting things:
 
 - CSI compliant bare metal clusters
+- BGP Peer integration with Calico
 - IPV6/IPV4/dualstack bare-metal clusters with Calico
 - Cluster to cluster migrations
 - Helm to kustomize migrations
 - automated dns and certificates (certmanager/externaldns)
-- OIDC Login for the cluster and its applications
+- OIDC SSO Login for the cluster and its applications
 - Deployment of VOIP Applications to kubernetes
 - GitOps with Gitlab, Github, bitbucket, ArgoCD
 - Bare-metal ingress load balancing with ha-proxy and Traefik
 - Cost management depending on kubecost
+- Storage and Backups with longhorn
 
+Github excerpts:
+
+- Simpleapp is a simple app that defines a basic kubernetes app i use in my trainings. It contains a simple MVC structure for packages, a Mux subrouter integration, kube manifests and an easy to learn structure. <https://github.com/jhoelzel/simpleapp>
+- Auto Updating base images This image is based on mcr.microsoft.com/azure-cli and integrates mongodb-tools in order to easily backup databases in a production aks. <https://github.com/jhoelzel/docker-azure_cli-mongodb_tools>
+- Cronor is a kubernetes cron job image with one task: change our deployment depending if it's day or night. This is a showcase of how easily the kubernetes api can be implemented directly into your code in multiple ways.  <https://github.com/jhoelzel/cronor>
+- Ingress and Egress with the same IP on Azure <https://github.com/jhoelzel/aks_ingress_egress_same_ip>
+- DevContainers: Over the years I noticed that I have been throwing away a lot of nice dockerfiles and this repository is deemed to change that.<https://github.com/jhoelzel/devcontainer>
 
 ### general experience
 
