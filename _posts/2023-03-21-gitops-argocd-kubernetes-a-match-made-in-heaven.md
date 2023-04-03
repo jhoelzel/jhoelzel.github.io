@@ -6,7 +6,7 @@ categories: kubernetes
 tags: [kubernetes, gitops, argocd]
 ---
 
-Kubernetes, the rock star of container orchestration platforms, becomes a true showstopper when combined with GitOps workflows. Enter ArgoCD, a declarative, Kubernetes-native continuous delivery maestro that transforms Kubernetes into an even more harmonious experience. In this subchapter, we will explore the delightful duet of ArgoCD and Kubernetes, highlighting the advantages that arise from this dynamic duo.
+Kubernetes, the rock star of container orchestration platforms, becomes a true showstopper when combined with GitOps workflows. Enter ArgoCD, a declarative, Kubernetes-native continuous delivery maestro that transforms Kubernetes into an even more harmonious experience. In this article, we will explore the delightful duet of ArgoCD and Kubernetes, highlighting the advantages that arise from this dynamic duo.
 
 ### A Symphony of Infrastructure and Application Management
 
