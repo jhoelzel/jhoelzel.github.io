@@ -56,6 +56,7 @@ By including these components pre-installed, K3s aims to simplify the deployment
 Both k3s and Kubernetes are designed to be scalable and performant. However, k3s is optimized to run on low-resource environments, such as edge devices and IoT. It has a smaller resource footprint and requires fewer resources to run, making it an ideal choice for small and medium businesses with limited resources.
 
 The following are the minimum CPU and memory [requirements for nodes in a high-availability K3s server](https://docs.k3s.io/installation/requirements):
+
 | Deployment Size | Nodes | VCPUS | RAM |
 | --- | --- | --- |
 | Small            | Up to 10 | 2 | 4 GB |
