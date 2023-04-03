@@ -2,7 +2,7 @@
 layout: post
 title: Comparing k3s with Kubernetes 
 subtitle: How k3s is Often the Better Choice
-categories: hints
+categories: kubernetes
 tags: [kubernetes, k3s]
 ---
 # Comparing k3s with Kubernetes: How k3s is Often the Better Choice
