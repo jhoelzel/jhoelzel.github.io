@@ -1,3 +1,10 @@
+---
+layout: post
+title: Comparing k3s with Kubernetes 
+subtitle: How k3s is Often the Better Choice
+categories: hints
+tags: [kubernetes, k3s]
+---
 # Comparing k3s with Kubernetes: How k3s is Often the Better Choice
 
 As a startup, you may be considering the use of container orchestration for your company. Container orchestration allows you to manage and deploy containerized applications easily and efficiently. There are several options available, but two of the most popular choices are **k3s** and **Kubernetes**. In this post, we will compare these two options and discuss why k3s may often be the better choice for smaller setups.
