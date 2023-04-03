@@ -6,7 +6,7 @@ categories: gitops
 tags: [agile, kubernetes, gitops]
 ---
 
-The software development industry has seen a paradigm shift over the years with the emergence of Agile methodologies and GitOps practices. As a senior engineer, I've witnessed firsthand the benefits of adopting these two approaches in conjunction with each other. In this article, I will be discussing the definitions of GitOps and Agile, the reasons they are considered revolutionary, and why companies adopting Agile methodologies should also embrace GitOps. Throughout the article, I will provide examples based on Kubernetes.
+The software development industry has seen a paradigm shift over the years with the emergence of Agile methodologies and GitOps practices. As a senior engineer, I've witnessed firsthand the benefits of adopting these two approaches in conjunction with each other. In this article, I will be discussing the definitions of GitOps and Agile, the reasons they are considered revolutionary, and why companies adopting Agile methodologies should also embrace GitOps. 
 
 ## Gitops
 GitOps is a modern software development and deployment practice that emphasizes declarative infrastructure and application management using Git as the single source of truth. It bridges the gap between development and operations, promoting collaboration and automating deployment processes. GitOps relies on version control, automated testing, and continuous delivery to ensure consistency, security, and stability throughout the software lifecycle. Kubernetes, a powerful container orchestration platform, is frequently used in GitOps workflows to manage the deployment, scaling, and maintenance of containerized applications.
