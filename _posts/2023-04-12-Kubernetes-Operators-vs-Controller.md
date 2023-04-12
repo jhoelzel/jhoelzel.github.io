@@ -33,7 +33,7 @@ Both controllers and operators are essential tools for Kubernetes automation, wi
 
 ## Creating Controllers and Operators with Go
 
-Go, also known as Golang, is a popular choice for developing Kubernetes controllers and operators, thanks to its simplicity, strong concurrency support, and native compatibility with the Kubernetes ecosystem. In this section, we briefly outline the process of creating custom controllers and operators using Go.
+Golang is a popular choice for developing Kubernetes controllers and operators, thanks to its simplicity, strong concurrency support, and native compatibility with the Kubernetes ecosystem. In this section, we briefly outline the process of creating custom controllers and operators using Go.
 
 **Creating Custom Controllers with Go**:
 
