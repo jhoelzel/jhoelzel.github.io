@@ -162,7 +162,6 @@ If you enjoyed this article and would like to know more how k3s could be deploye
 - [k3s documentation](https://k3s.io/docs/)
 - [Kubernetes documentation](https://kubernetes.io/docs/)
 - [Rancher Labs](https://rancher.com/)
-- [Packet](https://www.packet.com/)
 - [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/)
 - [Suse](https://www.suse.com/de-de/products/rancher-kubernetes-engine/)
 - [storage backends for etcd in k3s](https://docs.k3s.io/installation/datastore)
