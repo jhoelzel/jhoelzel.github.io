@@ -5,7 +5,7 @@ author: Johannes Hölzel
 
 copyright: >-
   Random ramblings of an IT veteran for future documentation purposes. <br />
-  © {currentYear} {author} <br /> No guarantees, please use everything at your own discretion.
+  © {currentYear} {author} <br /> No guarantees,please use everything at your own discretion. <br/> All trademarks, logos, and software mentioned on this website are the property of their respective owners.
 description: >- # this means to ignore newlines until "baseurl:"
   Random ramblings of an IT veteran for future documentation purposes.
 
