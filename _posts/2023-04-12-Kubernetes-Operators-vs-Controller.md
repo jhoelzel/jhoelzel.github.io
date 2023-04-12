@@ -7,19 +7,19 @@ tags: [kubernetes, kubernetes-operator, kubernetes-controller, automation]
 ---
 Kubernetes has established itself as a leading platform for container orchestration, providing efficient ways to deploy, scale, and manage applications. At the core of Kubernetes automation are controllers and operators, two powerful mechanisms for managing resources within a cluster. 
 
-### Desired State vs. Current State: Embracing the Fluidity of Kubernetes
+## Desired State vs. Current State: Embracing the Fluidity of Kubernetes
 
 Kubernetes embraces a cloud-native perspective, designed to accommodate constant change within a cluster. As a result, clusters can undergo modifications at any time, with control loops actively addressing failures and ensuring the system's resilience. This dynamic nature implies that a Kubernetes cluster may never truly attain a stable state.
 
 However, the ever-evolving state of a cluster should not be a cause for concern. As long as the controllers managing the cluster are operational and capable of implementing meaningful changes, the stability of the overall state becomes less significant. By acknowledging and adapting to the fluidity of Kubernetes, engineers can harness the platform's full potential, ensuring that applications remain reliable and performant despite the inherent variability in the system.
 
-## Kubernetes Controllers - The Built-In Resource Managers
+# Kubernetes Controllers - The Built-In Resource Managers
 
 Kubernetes controllers are integral components of the platform, responsible for maintaining the desired state of native resources within a cluster. Controllers are designed to manage built-in resources, such as ReplicaSets, Deployments, and Services.
 
 Controllers follow the Kubernetes "controller pattern," a control loop that monitors changes in the desired state and updates the cluster accordingly. For example, when a Deployment is created, the Deployment controller ensures that the specified number of replicas for a particular application is running. If a replica fails, the controller will create a new one to maintain the desired state.
 
-## Kubernetes Operators - The Custom Domain-Specific Managers
+# Kubernetes Operators - The Custom Domain-Specific Managers
 
 Kubernetes operators offer a more specialized approach to resource management, allowing users to extend Kubernetes functionality through Custom Resource Definitions (CRDs). Operators are tailored to manage domain-specific tasks and resources, providing a high level of automation for application-specific needs.
 
@@ -31,7 +31,7 @@ Determining whether to use a controller or an operator depends on the specific r
 
 Both controllers and operators are essential tools for Kubernetes automation, with unique strengths and use cases. When dealing with built-in resources, controllers are the preferred choice, while operators are ideal for managing application-specific tasks and resources.
 
-## Best Practices for Controllers and Operators
+# Best Practices for Controllers and Operators
 
 When using controllers and operators, adhering to best practices can significantly improve the efficiency, maintainability, and reliability of your Kubernetes cluster. Here are some best practices to consider when working with controllers and operators:
 
@@ -51,11 +51,11 @@ When using controllers and operators, adhering to best practices can significant
 
 8. Keep your operators up-to-date: Regularly update your operators to benefit from new features, bug fixes, and performance improvements. Subscribe to notifications from the operator's repository and follow the recommended upgrade procedures.
 
-## Wrapping up
+# Wrapping up
 
 Understanding the nuances of Kubernetes controllers and operators is crucial for fully leveraging the automation capabilities of the platform. By following best practices and effectively utilizing controllers for built-in resources and operators for domain-specific tasks, senior engineers can optimize their Kubernetes clusters and ensure the efficient scaling and management of their applications. With a solid grasp of these two mechanisms and adherence to best practices, Kubernetes users can unlock the full potential of container orchestration and drive their applications towards greater reliability and performance.
 
-### Sources
+## Sources
 
 [Kubernetes Operator DOCs](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 [Kubernetes Controller DOCs](https://kubernetes.io/docs/concepts/architecture/controller/)
