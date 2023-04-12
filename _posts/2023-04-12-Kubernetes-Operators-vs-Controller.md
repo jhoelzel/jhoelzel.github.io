@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controllers vs. Operators and when to user which 
+title: Controllers vs. Operators and when to use which 
 subtitle: The Kubernetes Automation Showdown
 categories: kubernetes
 tags: [kubernetes, kubernetes-operator, kubernetes-controller, automation]
