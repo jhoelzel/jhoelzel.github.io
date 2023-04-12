@@ -7,7 +7,7 @@ tags: [kubernetes, kubernetes-operator, kubernetes-controller, automation]
 ---
 Kubernetes has established itself as a leading platform for container orchestration, providing efficient ways to deploy, scale, and manage applications. At the core of Kubernetes automation are controllers and operators, two powerful mechanisms for managing resources within a cluster. 
 
-# Desired State vs. Current State: Embracing the Fluidity of Kubernetes
+### Desired State vs. Current State: Embracing the Fluidity of Kubernetes
 
 Kubernetes embraces a cloud-native perspective, designed to accommodate constant change within a cluster. As a result, clusters can undergo modifications at any time, with control loops actively addressing failures and ensuring the system's resilience. This dynamic nature implies that a Kubernetes cluster may never truly attain a stable state.
 
@@ -25,7 +25,7 @@ Kubernetes operators offer a more specialized approach to resource management, a
 
 Operators are built on top of the controller pattern, incorporating domain-specific knowledge and handling more complex use cases. A prime example is the kube-prometheus operator, which automates the deployment, management, and scaling of Prometheus, Alertmanager, and Grafana for Kubernetes monitoring. By using the kube-prometheus operator, engineers can easily set up a comprehensive monitoring solution for their cluster without having to configure each component individually.
 
-# Controllers vs. Operators - Selecting the Appropriate Approach
+### Controllers vs. Operators - Selecting the Appropriate Approach
 
 Determining whether to use a controller or an operator depends on the specific requirements and the desired level of automation. Controllers are well-suited for managing native Kubernetes objects and maintaining the desired state of built-in resources. In contrast, operators are designed to manage application-specific tasks and resources, offering a higher level of customization and domain-specific knowledge.
 
