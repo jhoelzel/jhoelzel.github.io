@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Controllers vs. Operators The Kubernetes Automation Showdown
-subtitle: How k3s is Often the Better Choice
+title: Controllers vs. Operators and when to user which 
+subtitle: The Kubernetes Automation Showdown
 categories: kubernetes
 tags: [kubernetes, kubernetes-operator, kubernetes-controller, automation]
 ---
