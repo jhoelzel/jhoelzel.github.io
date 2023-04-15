@@ -103,10 +103,11 @@ Therfore I am very happy to see SuSe integrate a simply dashboard into the clust
 
 ## it's k3s!!!
 
-As mentioned before, Rancher-Desktop comes with my favorite kubernetes distribution, which is also as you might have guessed Rancher Labs powered: [K3s](k3s.io). 
-k3s is a lightweight Kubernetes distribution. It was designed to be easy to install, run, and maintain on any infrastructure, including bare-metal servers, virtual machines, and the cloud. In September 2020, k3s became a Cloud Native Computing Foundation (CNCF) project, which means ***it must pass the same software conformance tests that other CNCF-certified distributions for Kubernetes*** must pass. This ensures that configurations built for Kubernetes will work with k3s.
+As mentioned before, Rancher-Desktop comes with my favorite kubernetes distribution, which is also as you might have guessed Rancher Labs powered: [K3S](k3s.io).
 
-You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html). While reading it, you can keep in mind that your local and your cloud cluster can now aboslutetly run on the excat same stack. Well, sure there is some WSL involved but once you overlook the tiny performance hit, that is to be expected for a dev env, and really inevideable on windows anyway. 
+[K3S](k3s.io) is a lightweight Kubernetes distribution. It was designed to be easy to install, run, and maintain on any infrastructure, including bare-metal servers, virtual machines, and the cloud. In September 2020, k3s became a Cloud Native Computing Foundation (CNCF) project, which means ***it must pass the same software conformance tests that other CNCF-certified distributions for Kubernetes*** must pass. This ensures that configurations built for Kubernetes will work with k3s.
+
+You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html). While reading it, you can keep in mind that ***your local and your cloud cluster can now aboslutetly run on the excat same stack***. Well, sure there is some WSL involved but once you overlook the tiny performance hit, that is to be expected for a dev env, and really inevideable on windows anyway... 
 
 ## German quality with a long positive history
 
