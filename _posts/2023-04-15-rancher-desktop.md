@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simplifying Kubernetes Developement for the Desktop with Rancher Desktop
+title: Simplifying Kubernetes Developement with Rancher Desktop
 subtitle: and Rising Above Docker's Shortcomings 
 categories: kubernetes
 tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
