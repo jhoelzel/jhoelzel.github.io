@@ -30,7 +30,7 @@ Finally the containerization has matured immensly and there are many other playe
 
 ### Moby: a modular toolkit for containerization
 
-(Moby)[https://mobyproject.org/] is an open-source project created by Docker with the aim of making software containerization faster and more straightforward and especially less political!
+[Moby](https://mobyproject.org/) is an open-source project created by Docker with the aim of making software containerization faster and more straightforward and especially less political!
 Moby provides a modular "Lego set" of toolkit components that can be assembled to create customized container-based systems. These components include container build tools, a container registry, orchestration tools, a runtime, and more.
 It is intended for engineers, integrators, and enthusiasts looking to modify, hack, fix, experiment, invent, and build systems based on containers. It is not designed for people seeking a commercially supported system, but rather for those who want to work and learn with open-source code or are themselves open like Rancher-Destop.
 
@@ -63,14 +63,23 @@ Since Rancher Desktop comes equipped with k3s, a lightweight certified Kubernete
 
 ## my Dev Container has not changed but my processes improved
 
-With Moby and Rancher desktop I can still simply mount my docker.sock into my dev container and work for all my clients in isolation and "dependecy-fludidity".
+With Moby and Rancher desktop I can still simply mount my docker.sock into my [dev container](https://github.com/jhoelzel/devcontainer/tree/master/golang/k8s-go-client%20helm%20kubectl) and work for all my clients in isolation and "dependecy-fludidity".
 
 ``` json
-	"mounts": [
-		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-	],
+"mounts": [
+	"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+],
 ```
 
+and mount the kubeconfig on your computer. (or copy it by hand whichever your prefer)
+
+``` json
+"runArgs": [
+	//kube keys 
+	 "-v",
+	"${env:HOME}${env:USERPROFILE}/.kube:/home/vscode/.kube:ro"
+]
+```
 This enables me to build container images with separated sources and also legally empowers me to separate everything. With Gitops setup for each client I can simply reset my local kubernetes cluster to factory settings, mount my kubeconfig and off I am. ( I admit that a computer with NVME, DDR5 and I9 makes this much more pleasureable.).
 
 As I have mentioned before, the integrated container registry also empowers me to not have to upload all my images to a hub and then redownload them again simply because I have to. Which saves time, disk space and overall nerves.
@@ -81,7 +90,7 @@ More veteraned readers might know of a little tool called Lens-Desktop by Mirant
 
 Therfore I am very happy to see Suse integrate a simply dashboard into the cluster directly. It is the same Dashboard integrated into Rancher itself but super usefull for local development! And if you like to have more, you can simply run Rancher itself in your local cluster to provision external ones too. This is great for bare-metal deployments and more!
 
-Rancher, the big one, is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads. <https://www.rancher.com/why-rancher>
+[Rancher, the big one](https://www.rancher.com/), is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads. 
 
 ## German quality with a long positive history
 
