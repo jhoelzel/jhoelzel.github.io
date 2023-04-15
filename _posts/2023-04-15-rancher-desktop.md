@@ -13,7 +13,9 @@ In this article I would like to introduce rancher-desktop to those who dont know
 
 [Rancher Desktop](https://rancherdesktop.io/), an open-source desktop application developed by SUSE, is available for Mac, Windows, and Linux, streamlining Kubernetes and container management right on your desktop. SUSE, a global leader in innovative, reliable, and enterprise-grade open source solutions, is renowned for their expertise in Linux, Kubernetes, and cloud infrastructure.
 
-With the flexibility to choose your Kubernetes version and the ability to build, push, pull, and run container images using containerd or Moby (dockerd), Rancher Desktop is a versatile tool for professional Kubernetes engineers. Say goodbye to the need for a registry — your built container images can be run by Kubernetes instantly. Shortly I will publish an article on how to use it, but I am locally developing all my kubernetes projects in a container using VS-Code Remote containers and am directly deploying them to my single node Computer.
+With the flexibility to choose your Kubernetes version and the ability to build, push, pull, and run container images using containerd or Moby (dockerd), Rancher Desktop is a versatile tool for professional Kubernetes engineers. 
+
+**Say goodbye to the need for a registry for local development** — your built container images can be run by Kubernetes instantly. Shortly I will publish an article on how to use it, but I am locally developing all my kubernetes projects in a container using VS-Code Remote containers and am directly deploying them to my single node Computer.
 
 ## Why I Choose Rancher Desktop Over Docker?
 
@@ -29,7 +31,9 @@ As of January 31, 2022, the licensing model of Docker Desktop has changed fundam
 
 Also as of this march Docker has sent an email to users with "organization" accounts on Docker Hub, **warning that their accounts and images will be deleted unless they upgrade to a paid team plan**. This has caused significant anxiety for open source maintainers who use the platform to host images for their communities. The cost of a team plan is $420 per year, which is a significant burden for many open source projects that receive little or no funding. Additionally, Docker's definition of what is allowable for their Open Source program was out of touch, ruling out anything other than spare-time projects or those wholly donated to an open-source foundation. This move by Docker highlights the funding problem in the open source community, and how companies can forget their roots once they start making significant revenue.
 
-When Docker started to **limit the pulls of public open-source images** like Go, Prometheus, and NATS, many open source projects have already moved away from Docker Hub anyway. Docker eventually acknowledged their mistake and reversed their decision to sunset their Free Team plan. They recognized that their policy and communication were both flawed, and after listening to feedback from their community, they decided to make changes. But in my opinion the cat is already out of the bag and going back now feels a little bit like returning to an abusive ex.
+When Docker started to **limit the pulls of public open-source images** like Go, Prometheus, and NATS, many open source projects have already moved away from Docker Hub anyway. Docker eventually acknowledged their mistake and reversed their decision to sunset their Free Team plan. 
+
+They recognized that their policy and communication were both flawed, and after listening to feedback from their community, they decided to make changes. But in my opinion the cat is already out of the bag and going back now feels a little bit like returning to an abusive ex.
 
 Finally the containerization has matured immensly and there are many other players at play that can solve my issue competently.
 
@@ -91,9 +95,9 @@ As I have mentioned before, the integrated container registry also empowers me t
 
 ## It includes a dashboard for kubernetes
 
-More veteraned readers might know of a little tool called Lens-Desktop by Mirantis. When kubernetes-lens came out it was the greatest software to see what is going on in a clusters and I have suggested it to basically everyone working with k8s saying its a must have tool and also made many teams install it. It used to be free and open but now requires user accounts and is monitizing in the same way the docker corp is. (You can find more about the issue here)[https://github.com/lensapp/lens/issues/5444]
+More veteraned readers might know of a little tool called Lens-Desktop by Mirantis. When kubernetes-lens came out it was the greatest software to see what is going on in a clusters and I have suggested it to basically everyone working with k8s saying its a must have tool and also made many teams install it. It used to be free and open but now requires user accounts and is monitizing in the same way the docker corp is. [You can find more about the issue here](https://github.com/lensapp/lens/issues/5444)
 
-Therfore I am very happy to see Suse integrate a simply dashboard into the cluster directly. It is the same Dashboard integrated into Rancher itself but super usefull for local development! And if you like to have more, you can simply run Rancher itself in your local cluster to provision external ones too. This is great for bare-metal deployments and more!
+Therfore I am very happy to see SuSe integrate a simply dashboard into the cluster directly. It is the same Dashboard integrated into Rancher itself but super usefull for local development! And if you like to have more, you can simply run Rancher itself in your local cluster to provision external ones too. This is great for bare-metal deployments and more!
 
 [Rancher, the big one](https://www.rancher.com/), is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads. 
 
@@ -106,7 +110,7 @@ You can also find out more about it in my recent post [Comparing k3s with Kubern
 
 ## German quality with a long positive history
 
-As a german myself I am also very happy to see Suse succed in this space! S.u.S.E. actually is an acronym for "Software- und System-Entwicklung" which translates to "Software and System Development" and has a long stance of being open and very developer friendly. Of course it is by now an international company with many customers worldwide but it has always stood for the principle of "here take this its free" and "if you need help though, we offer paid support for everything". Which is, in my honest opinion, how Docker itself should have handled things.
+As a german myself I am also very happy to see SuSe succed in this space! S.u.S.E. actually is an acronym for "Software- und System-Entwicklung" which translates to "Software and System Development" and has a long stance of being open and very developer friendly. Of course it is by now an international company with many customers worldwide but it has always stood for the principle of "here take this its free" and "if you need help though, we offer paid support for everything". Which is, in my honest opinion, how Docker itself should have handled things.
 
 SUSE's involvement in the Kubernetes ecosystem goes beyond its products and services. The company actively contributes to the Kubernetes open-source community, participating in the development of new features and enhancements, and collaborating with other industry players to promote the adoption and advancement of containerization and Kubernetes technologies.
 
