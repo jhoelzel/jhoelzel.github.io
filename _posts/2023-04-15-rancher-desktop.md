@@ -6,6 +6,11 @@ categories: kubernetes
 tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
 ---
 
+In this article I would like to introduce rancher-desktop to those who dont know it yet. I have recently switched away from docke-desktop and am now a happy little camper with a lot of joy while wokring.
+
+**TLDR**
+> Rancher Desktop, is a must-have tool for professional Kubernetes engineers looking to simplify container management and Kubernetes configuration on the (Windows) Desktop, all while benefiting from a reliable, proven foundation and the expertise of a global leader in open source solutions. By embracing the open source community and overcoming Docker's shortcomings, Rancher Desktop is the ideal choice for today's Kubernetes professionals. With its versatility, ease of use, and commitment to open source, Rancher Desktop is my go-to tool for Kubernetes management.
+
 [Rancher Desktop](https://rancherdesktop.io/), an open-source desktop application developed by SUSE, is available for Mac, Windows, and Linux, streamlining Kubernetes and container management right on your desktop. SUSE, a global leader in innovative, reliable, and enterprise-grade open source solutions, is renowned for their expertise in Linux, Kubernetes, and cloud infrastructure.
 
 With the flexibility to choose your Kubernetes version and the ability to build, push, pull, and run container images using containerd or Moby (dockerd), Rancher Desktop is a versatile tool for professional Kubernetes engineers. Say goodbye to the need for a registry — your built container images can be run by Kubernetes instantly. Shortly I will publish an article on how to use it, but I am locally developing all my kubernetes projects in a container using VS-Code Remote containers and am directly deploying them to my single node Computer.
@@ -92,17 +97,20 @@ Therfore I am very happy to see Suse integrate a simply dashboard into the clust
 
 [Rancher, the big one](https://www.rancher.com/), is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads. 
 
+## it's k3s!!!
+
+As mentioned before, Rancher-Desktop comes with my favorite kubernetes distribution, which is also as you might have guessed Rancher Labs powered: [K3s](k3s.io). 
+k3s is a lightweight Kubernetes distribution. It was designed to be easy to install, run, and maintain on any infrastructure, including bare-metal servers, virtual machines, and the cloud. In September 2020, k3s became a Cloud Native Computing Foundation (CNCF) project, which means ***it must pass the same software conformance tests that other CNCF-certified distributions for Kubernetes*** must pass. This ensures that configurations built for Kubernetes will work with k3s.
+
+You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html). While reading it, you can keep in mind that your local and your cloud cluster can now aboslutetly run on the excat same stack. Well, sure there is some WSL involved but once you overlook the tiny performance hit, that is to be expected for a dev env, and really inevideable on windows anyway. 
+
 ## German quality with a long positive history
 
 As a german myself I am also very happy to see Suse succed in this space! S.u.S.E. actually is an acronym for "Software- und System-Entwicklung" which translates to "Software and System Development" and has a long stance of being open and very developer friendly. Of course it is by now an international company with many customers worldwide but it has always stood for the principle of "here take this its free" and "if you need help though, we offer paid support for everything". Which is, in my honest opinion, how Docker itself should have handled things.
 
 SUSE's involvement in the Kubernetes ecosystem goes beyond its products and services. The company actively contributes to the Kubernetes open-source community, participating in the development of new features and enhancements, and collaborating with other industry players to promote the adoption and advancement of containerization and Kubernetes technologies.
-And yeah, thats why I always have put my trust in them.
 
 As Americans you might love them too because they [keep your country safe](https://ranchergovernment.com/)
 
-## TLDR
+And yeah, thats why I always have put my trust in them.
 
-Rancher Desktop, is a must-have tool for professional Kubernetes engineers looking to simplify container management and Kubernetes configuration on the (Windows) Desktop, all while benefiting from a reliable, proven foundation and the expertise of a global leader in open source solutions. By embracing the open source community and overcoming Docker's shortcomings, Rancher Desktop is the ideal choice for today's Kubernetes professionals. With its versatility, ease of use, and commitment to open source, Rancher Desktop is my go-to tool for Kubernetes management.
-
-Finally you probably should also take a look at my favorite kubernetes distribution, which is also as you might have guessed Suse powered: [K3s](k3s.io). You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html)
