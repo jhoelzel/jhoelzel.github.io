@@ -87,7 +87,8 @@ Rancher, the big one, is a complete software stack for teams adopting containers
 
 As a german myself I am also very happy to see Suse succed in this space! S.u.S.E. actually is an acronym for "Software- und System-Entwicklung" which translates to "Software and System Development" and has a long stance of being open and very developer friendly. Of course it is by now an international company with many customers worldwide but it has always stood for the principle of "here take this its free" and "if you need help though, we offer paid support for everything". Which is, in my honest opinion, how Docker itself should have handled things.
 
-I am pretty sure that most of you have heard of their excellent Linux distributions too. And yeah, thats why I always have put my trust in them.
+SUSE's involvement in the Kubernetes ecosystem goes beyond its products and services. The company actively contributes to the Kubernetes open-source community, participating in the development of new features and enhancements, and collaborating with other industry players to promote the adoption and advancement of containerization and Kubernetes technologies.
+And yeah, thats why I always have put my trust in them.
 
 ## Conclusion
 Rancher Desktop, is a must-have tool for professional Kubernetes engineers looking to simplify container management and Kubernetes configuration on the (Windows) Desktop, all while benefiting from a reliable, proven foundation and the expertise of a global leader in open source solutions. By embracing the open source community and overcoming Docker's shortcomings, Rancher Desktop is the ideal choice for today's Kubernetes professionals. With its versatility, ease of use, and commitment to open source, Rancher Desktop is my go-to tool for Kubernetes management.
