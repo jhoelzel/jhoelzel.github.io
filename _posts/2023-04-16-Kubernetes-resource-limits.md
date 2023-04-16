@@ -6,7 +6,6 @@ categories: kubernetes
 tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
 ---
 
-Taming Traffic Spikes in Kubernetes: The Power of Resource Limits and Buffered Workloads
 ## In autoscaling you have to be prepared! The Consequences of Ignoring or setting Limits
 
 In Kubernetes, setting resource limits can help you manage your cluster's resources more effectively. However, whether you set resource limits or not, there will always be a chance that some users are left out due to resource constraints or workload spikes. To ensure the best user experience and maintain high availability, it is crucial to design buffered workloads and configure your autoscalers to compensate for fluctuations in demand.
