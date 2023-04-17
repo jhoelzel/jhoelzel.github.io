@@ -7,15 +7,17 @@ title: About me
 
 **I talk to humans and machines and specialize in golang, kubernetes as well as automating everything!**
 
-As consultant and developer I provide services from DevOps to application development and have a history of completing projects on time and in budget. **I currently focus on kubernetes, golang and terraform** but have seen and worked on multiple environments.
+As a consultant and developer, I provide services ranging from DevOps to application development and have a history of completing projects on time and within budget. My current focus is on Kubernetes, Golang, and Terraform but I have experience working in various environments.
 
-I grew up with the internet, uploaded my first websites to geocities, was tech-admin of a lot of bulletin boards and have been doing professional code since 2003. After trying to build my first start-up in 2006 I realized that they just won’t come only because I built it. Therefore, I have a bachelor economical psychology, which helps me immensely with team leadership and communication but also allows me to view the product from multiple perspectives.
- 
-What started out as WordPress and ASP.NET agency with server hosting in 2007 has long since evolved into full service consultancy and freelancing services with clients throughout the globe. I started working when Servers where still mostly dedicated, have lived the revolution of virtual servers, made a short stop at serverless tech and am now invested in the kubernetes ecosystem and its containers. 
+Growing up with the internet, I uploaded my first websites to Geocities, served as tech-admin for numerous bulletin boards, and have been professionally coding since 2003. After attempting to build my first start-up in 2006, I learned that success would not come simply because I built it. As a result, I earned a bachelor's degree in economical psychology, which has greatly enhanced my team leadership and communication skills and allows me to view products from multiple perspectives.
 
-**My preferred clouds are Azure and AWS**, but I have worked on others **and** also like to tame **bare-metal** and everything in-between. I love solving difficult issues and have worked on multi cloud deployments before.
+What began as a small agency offering server hosting in 2007 has since evolved into a full-service consultancy and freelancing business, serving clients around the world. I started working when servers were primarily dedicated, experienced the virtual server revolution, briefly delved into serverless tech, and am now immersed in the Kubernetes ecosystem and its container technology. My background in psychology gives me unique insights into team leadership and communication, and I have a proven track record of leading and creating successful international teams.
 
-All this makes me perfect if you are looking for someone with seniority, that is flexible, plays well with others but also likes to get his hands dirty. If you would like to see what I have been up to, please check the projects section on LinkedIn.
+My preferred cloud platforms are Azure and AWS, but I have also worked on other platforms, including bare-metal and everything in between. I enjoy tackling complex problems and have experience with multi-cloud deployments.
+
+I am currently offering my services as a freelancer and would be happy to discuss potential opportunities involving Kubernetes. If you're looking for someone with seniority and experience in the field, please feel free to reach out. I have extensive experience with Amazon AWS, Microsoft Azure, and bare-metal Kubernetes, and I am confident in my abilities.
+
+All of this makes me an ideal candidate if you are seeking a senior-level professional who is flexible, collaborative, and hands-on. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
 ### kubernetes experience includes
 
@@ -62,7 +64,9 @@ Interesting things:
 - Storage and Backups with longhorn
 
 Github excerpts:
-
+- SpInvalidFileNameFinder is a command-line tool written in Go that helps you find and optionally rename files and folders with invalid names for SharePoint.<https://github.com/jhoelzel/SpInvalidFileNameFinder>
+- Consoleman is a command-line utility that acts like Postman but runs in the console. You can use it to send HTTP requests to APIs and inspect the responses.
+Disclaimer: I am aware that this does not much more than curl, but it is an exercise using ASCII interfaces with golang and to prove the point that it is possible without dependencies. <https://github.com/jhoelzel/consoleman>
 - Simpleapp is a simple app that defines a basic kubernetes app i use in my trainings. It contains a simple MVC structure for packages, a Mux subrouter integration, kube manifests and an easy to learn structure. <https://github.com/jhoelzel/simpleapp>
 - Auto Updating base images This image is based on mcr.microsoft.com/azure-cli and integrates mongodb-tools in order to easily backup databases in a production aks. <https://github.com/jhoelzel/docker-azure_cli-mongodb_tools>
 - Cronor is a kubernetes cron job image with one task: change our deployment depending if it's day or night. This is a showcase of how easily the kubernetes api can be implemented directly into your code in multiple ways.  <https://github.com/jhoelzel/cronor>
