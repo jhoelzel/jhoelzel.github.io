@@ -86,7 +86,7 @@ subjects:
 
 Replace "your-gitlab-group" with the appropriate GitLab group name that you want to grant access to your Kubernetes cluster.
 
-Step 4: Test Your Configuration
+### Step 4: Test Your Configuration
 
 Obtain an OIDC token from GitLab using the following command, replacing <Application ID> and <Application Secret> with the values obtained in Step 1:
 
