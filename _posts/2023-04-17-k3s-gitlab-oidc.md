@@ -140,3 +140,47 @@ If everything is configured correctly, you should see a list of the nodes in you
 
 [kube-login](https://github.com/int128/kubelogin) is a kubectl plugin designed for Kubernetes OpenID Connect (OIDC) authentication, which is commonly referred to as kubectl oidc-login.
 Kubelogin is specifically developed to function as a client-go credential plugin. Upon executing kubectl, kubelogin triggers the browser to initiate a login to the designated provider. Once authenticated, kubelogin retrieves a token from the provider, enabling kubectl to access Kubernetes APIs.
+
+After installing kube-login, all you have to do is to adapt your kubeconfig like this:
+
+``` YAML
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: <certdata>
+    server: https://<yourcluster>:6443
+  name: default
+contexts:
+- context:
+    cluster: default
+    user: default
+  name: default
+current-context: default
+kind: Config
+preferences: {}
+users:
+- name: default
+  user:
+    auth-provider:
+      config:
+        client-id: <clientid>
+        client-secret: <clientsecret>
+        extra-scopes: email
+        idp-issuer-url: https://gitlab.yourdomain.yourtld
+      name: oidc
+- name: oidc
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - oidc-login
+      - get-token
+      - --oidc-issuer-url=https://gitlab.yourdomain.yourtld
+      - --oidc-client-id=<clientid>
+      - --oidc-client-secret=<clientsecret>
+      - --oidc-extra-scope=email
+      command: kubectl
+      env: null
+      interactiveMode: IfAvailable
+      provideClusterInfo: false
+```
