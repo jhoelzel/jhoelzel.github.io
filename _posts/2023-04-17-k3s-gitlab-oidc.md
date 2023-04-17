@@ -184,3 +184,7 @@ users:
       interactiveMode: IfAvailable
       provideClusterInfo: false
 ```
+
+After that all you have to do is adapt your gitlab application redirection url accordingly with: "http://localhost:8000" and you should be all set!
+  
+If you need help setting up OIDC for your cluster or are interested in more sophisticated techniques to secure your cluster, feel free to contact me on linkein.
