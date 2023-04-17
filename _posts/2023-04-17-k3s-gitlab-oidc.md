@@ -147,7 +147,7 @@ After installing kube-login, all you have to do is to adapt your kubeconfig like
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority-data: <certdata>
+    certificate-authority-data: <k3s-ca-data>
     server: https://<yourcluster>:6443
   name: default
 contexts:
