@@ -12,7 +12,7 @@ With the increasing adoption of microservices, the need for effective and **effi
 
 OpenID Connect (OIDC): OIDC is a widely-accepted authentication protocol built on top of OAuth 2.0. It enables clients to verify the identity of users based on the authentication performed by an authorization server. OIDC provides additional features, such as single sign-on (SSO), which simplifies the user experience across multiple applications. OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner. 
 
-You can learn more about it on the [OpenID Website] (https://openid.net/connect/)
+You can learn more about it on the [OpenID Website](https://openid.net/connect/)
 
 ## Integrating OIDC with GitLab and k3s
 
