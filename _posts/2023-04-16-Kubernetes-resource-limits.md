@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Taming Traffic Spikes in Kubernetes 
-subtitle: The Power of Resource Limits and Buffered Workloads
+subtitle: The Power of Resource Limits and Overprovisioning Workloads
 categories: kubernetes
-tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
+tags: [kubernetes, autoscaling, hpa, automation, overprovisioning]
 ---
 
 ## In autoscaling you have to be prepared! The Consequences of Ignoring or setting Limits
 
 In Kubernetes, setting resource limits can help you manage your cluster's resources more effectively. However, whether you set resource limits or not, there will always be a chance that some users are left out due to resource constraints or workload spikes. To ensure the best user experience and maintain high availability, it is crucial to design buffered workloads and configure your autoscalers to compensate for fluctuations in demand.
 
-In this article, we will explore the importance of buffered workloads and how to set up autoscalers (mainly the [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)) in Kubernetes to optimize resource utilization and provide a seamless user experience, regardless of whether resource limits are set or not. Through this balanced approach, you can achieve a more robust and resilient application infrastructure that meets the needs of your users even in the face of fluctuating demand.
+In this article, we will explore the importance of overprovisioning workloads and how to set up autoscalers (mainly the [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)) in Kubernetes to optimize resource utilization and provide a seamless user experience, regardless of whether resource limits are set or not. Through this balanced approach, you can achieve a more robust and resilient application infrastructure that meets the needs of your users even in the face of fluctuating demand.
 
 ***TLDR***
 > By implementing buffered workloads, you can create a cushion that allows your application to handle sudden increases in traffic or resource usage more gracefully. This approach helps prevent users from experiencing degraded performance or service outages during peak times. Combined with well-configured autoscalers, this strategy ensures that your cluster can dynamically adjust to changes in demand, scaling up or down as needed to accommodate user requests.
@@ -20,8 +20,8 @@ In this article, we will explore the importance of buffered workloads and how to
 
 Consider an 8-core nodesize cluster where Service A is deployed with CPU requests and no limits, and the HPA is set up accordingly, using a target metric value like average CPU utilization.
 
-Our workload consists of a deployment that we would like to autoscale, but also not overprovision so we start at one replica and l will provison up to 100 if there is a lot of load.
-Of course there are other parts omitted, because we should have a 12 factor application, but please bear with me for simplicity.
+Our workload consists of a deployment that we would like to autoscale, but also not overprovision our cluster. We start at one replica and would potentially provison up to 100 of them, if there is a lot of load on our systems.
+Of course there are other parts omitted, because we should have a 12 factor application and there are usually also databases involved, but please bear with me for simplicity.
 
 This is our workload: 
 
@@ -70,6 +70,7 @@ spec:
 ```
 
 To start with, we have a CPU request but no limit in place: CPU requests/limits are set to 200m / none.
+200m is usually enough to encorporate the average usage of the our super huge startup that means round about 20 concurrent users so we figured this is a great way to start off.
 
 ### oh no, here comes a traffic spike
 
@@ -78,16 +79,16 @@ In our hypothetical situation, a sudden surge in requests overwhelms the service
 Kubernetes' HPA operates as a control loop that runs intermittently, with an interval set by the **--horizontal-pod-autoscaler-sync-period** parameter to the kube-controller-manager (the default interval is 15 seconds and I bet you did not change it). The controller manager queries the resource utilization against the metrics specified in each HPA definition during each interval. It then selects the Pods based on the target resource's **.spec.selector** labels and obtains the metrics from either the resource metrics API (for per-Pod resource metrics) or the custom metrics API (for all other metrics). 
 
 We start out in a green field and have just deployed our application and Marketing is beating the drums to send our message out to the world.
-Therefore if there is a sharp increase in traffic, for instance your new and shiny app being shared on discord our scenario might play out like this:
+Therefore if there is a sharp increase in traffic, for instance your new and shiny app being shared on discord or reaching the front page of hackernews our scenarios might play out like this:
 
 ## Having no limits
 
-The spike hits the cluster and our pods start fighting for resources and critical services such as DNS, kube-proxy, and monitoring tools are competing for their share of CPU too. If your cluster is configured correctly, they will have priority over your workloads because they have QOS annotations, but anyway. We have provisioned our cluster with a little bit of headroom that we wanted to leave for unexpected surges like this.
+The sudden massive influx of request hits the cluster and our pods start fighting for resources and critical services such as DNS, kube-proxy, and monitoring tools are competing for their share of CPU too. If your cluster is configured correctly, they will have priority over your workloads because they have QOS annotations, and therfore also steal some of the leftover resources your app could have consumed. We have provisioned our cluster with a little bit of headroom that we wanted to leave for unexpected surges like this, but as we have seen with out request limit, we figured that 6 more cores should be plenty for now. 
 
 For per-Pod resource metrics like in our case, CPU, the controller calculates the utilization value as a **percentage of the equivalent resource request on the containers** in each Pod if a target utilization value is set. If a target raw value is set, the raw metric values are used directly. The controller takes the mean of the utilization or raw value (depending on the target type) across all targeted Pods in a deployment and produces a ratio used to scale the number of desired replicas.
 Consequently, the HPA scales the service based on the actual CPU usage and the target utilization. 
 
-Suppose the target CPU utilization is set at 50%, and the actual CPU usage is 8000m (8 cores), or all available cpu on the node, simply because as I mentioned a tremendous spike can happen in 15 seconds with social media involved. In this case, the HPA calculates the desired number of replicas using the formula: desiredReplicas = ceil[currentReplicas * (currentUtilization / targetUtilization)]. If we assume there's currently 1 pod running with 200m CPU request, the HPA calculates ceil[1 * (8000m / (1 * 200m * 50%))] = 80 and thus will try to scale to *80 replicas*. Now of course this is an over the top example, yet it is possible, especially with requests where the CPU usage is not linear with request usage. If you have no provisioned any buffer-nodes, kubernetes will now add 4 new servers/nodes for you. As our nodesize is set to 8 cores and we also need room for monitoring, logging, the kubelet and more on each node.
+Suppose the target CPU utilization is set at 50%, and the actual CPU usage is 8000m (8 cores), or all available cpu on the node, simply because as I mentioned a tremendous spike can happen in 15 seconds with social media involved. In this case, the HPA calculates the desired number of replicas using the formula: desiredReplicas = ceil[currentReplicas * (currentUtilization / targetUtilization)]. If we assume there's currently 1 pod running with 200m CPU request, the HPA calculates ceil[1 * (8000m / (1 * 200m * 50%))] = 80 and thus will try to scale to *80 replicas*. Now of course this is an over the top example, yet it is possible, especially with requests where the CPU usage is not linear with request usage. If you have not provisioned any buffer-nodes, kubernetes will now add 4 new servers/nodes for you. As our nodesize is set to 8 cores and we also need room for monitoring, logging, the kubelet and possibly more on each node.
 
 Even if we do not go directly to the extreme and resource usage rises only to 4000m or 4 cores the will still mean ceil[1 * (4000m / (1 * 200m * 50%))] = 40 Pods! Or as we have 8 core nodes, 2 new Servers.
 
@@ -101,7 +102,7 @@ So who wins the fight? **Noone**. These are the same pods with the same QoS sett
 
 ### Result for Endusers
 
-As you might imagine, when your **requests are getting killed** on the cluster, your end-users will not be perceived with happiness. Running requests might also get OOM Killed and therfore **you can not even guarantee the state of your appplication**. Your cluster is also going crazy, most likely, whhen you finally get all the nodes you wanted provisioned, the users will already be gone for them. It sucks for everyone involved.
+As you might imagine, when your **requests are getting killed** on the cluster, your end-users will not be perceived with happiness. Running requests might also get OOM Killed and therfore **you can not even guarantee the state of your appplication**. A higher CPU-request for the deployment would not have done much either, as the sheduler will always try to shedule pods according to their resource requirements. Your cluster is still going crazy, most likely, when you finally get all the nodes you wanted provisioned, the users will already be gone for them. It sucks for everyone involved and people will remember your error page and potentially loosing data.
 
 ### Limits are not necessary but required in order to scale gradually
 
@@ -136,33 +137,34 @@ In this scenario, each pod running the Service A container is limited to a maxim
 
 When a sudden surge in requests overwhelms the service, the pods' CPU usage increases. However, **due to the resource limits, each pod's CPU usage cannot exceed 500 millicores**. This prevents the pods from consuming all the available CPU resources on the node, reducing the likelihood of resource contention issues.
 
-The HPA will still monitor the actual CPU usage and still attempt to scale the number of replicas based on the target utilization. Suppose the target CPU utilization is set at 50%. If there's currently 1 pod running with a 200m CPU request, and the actual CPU usage is 500m (due to the resource limit), the HPA calculates ceil[1 * (500m / (1 * 200m * 50%))] = 5 and will try to scale to 5 replicas. Spawning 5 pods to accommodate the workload will happen quick and easy as most likely no new node will have to be provisioned yet. **That still will not be enough for your traffic spike**.
+The HPA will still monitor the actual CPU usage and still attempt to scale the number of replicas based on the target utilization. Suppose the target CPU utilization is set at 50%. If there's currently 1 pod running with a 200m CPU request, and the actual CPU usage is 500m (due to the resource limit), the HPA calculates ceil[1 * (500m / (1 * 200m * 50%))] = 5 and will try to scale to 5 replicas. Spawning 5 pods to accommodate the workload will happen quick and easy as most likely no new node will have to be provisioned yet. **That still will not be enough for your traffic spike, but it will do this again 15 seconds later**.
 
-As the number of replicas increases, the total CPU usage observed by the HPA will be capped by the combined CPU limits of all running pods. **This reduces the likelihood of over-scaling based on CPU usage spikes**.
+As the number of replicas increases, the total CPU usage observed by the HPA will be capped by the combined CPU limits of all running pods. **This reduces the likelihood of over-scaling based on CPU usage spikes and will not kill your requests**.
 The Cluster Autoscaler still operates to ensure there are enough nodes to accommodate the desired number of replicas and you cann still scale as much as you would like, but the reduced CPU usage due to the limits will likely require fewer nodes to be provisioned.
 The Kubernetes scheduler continues to assign workloads to nodes based on available resources, constraints, and other factors, but with resource limits in place, resource contention is *less likely* to occur.
 
 In this scenario, the pods will *not* fight for resources as aggressively as they would without limits, and critical services such as DNS, kube-proxy, and monitoring tools are less likely to be affected.
-Setting resource limits helps maintain stability and predictability within the cluster. It also encourages better resource management and more efficient scaling.
+**Setting resource limits helps maintain stability and predictability within the cluster**. It also encourages better resource management and more efficient scaling.
 
 Again Kubernetes' HPA operates as a control loop that runs intermittently, with an interval set by the **--horizontal-pod-autoscaler-sync-period** parameter, therefore our calculation will be repeated every 15 seconds and scaling will be much more smooth. The cluster autoscaler is also able to be configured to automatically provision nodes ones your resources are being exhausted at a limit you define and it will have more time to add new nodes.
 
 
 ## Result for Endusers
 
-When a container in Kubernetes consumes all of its allocated CPU limit, the system will take action to prevent it from using more CPU resources than the specified limit. The Linux kernel employs a technique called CPU throttling, which restricts the container's CPU usage to adhere to the imposed limit. **The most immediate consequence of a container using all of its CPU limit is a reduction in performance**. As the container's CPU usage is throttled, it may not be able to process requests as quickly as it could without the limit. This can result in increased latency and slower response times for users interacting with the containerized application. Which will not make your users happy, but **keep the state of your application safer** as the OOM-Reaper is much less likely to do a drive-by.
+When a container in Kubernetes consumes all of its allocated CPU limit, the system will take action to prevent it from using more CPU resources than the specified limit. The Linux kernel employs a technique called **CPU throttling**, which restricts the container's CPU usage to adhere to the imposed limit. **The most immediate consequence of a container using all of its CPU limit is a reduction in performance**. As the container's CPU usage is throttled, it may not be able to process requests as quickly as it could without the limit. This can result in increased latency and slower response times for users interacting with the containerized application. Which will not make your users happy, but **keep the state of your application safer** as the OOM-Reaper is much less likely to do a drive-by.
 
 ## the only way to win: Embracing Buffer Nodes and Resource Monitoring for Predictable Scaling in Kubernetes
 
-In Kubernetes, managing cluster resources effectively and ensuring high-quality service delivery is vital for a successful application deployment. As you have seen before, simply setting limits does not guarantee high avalability. One way to achieve this balance is by maintaining buffer nodes and performing regular checks on resource limits to plan scaling events accordingly. By incorporating these strategies, you can ensure that your cluster has the capacity to handle unexpected traffic spikes while maintaining resource limits to provide a consistent user experience.
+In Kubernetes, managing cluster resources effectively and ensuring high-quality service delivery is vital for a successful application deployment. As you have seen before, **simply setting limits does not guarantee high avalability**. One way to achieve this balance is by maintaining buffer nodes and performing regular checks on resource limits to plan scaling events accordingly. By incorporating these strategies, you can ensure that your cluster has the capacity to handle unexpected traffic spikes while maintaining resource limits to provide a consistent user experience.
 
-### Buffer Nodes: A Safety Net for Your Cluster
-Buffer nodes (also called overprovisioning) serve as a safety cushion for your cluster, providing extra capacity to accommodate sudden increases in workload. By maintaining **at least one buffer node in your cluster**, you can ensure that there's always a node available to handle traffic spikes, allowing your application to scale linearly without sacrificing quality.
+### Overprovisioning: A Safety Net for Your Cluster
+Buffer nodes (also called overprovisioning) serve as a safety cushion for your cluster, providing extra capacity to accommodate sudden increases in workload. By maintaining **at least one buffer node in your cluster**, you can ensure that there's always a node available to handle traffic spikes more smoothly, allowing your application to scale linearly without sacrificing quality.
 
 Having buffer nodes not only helps to keep your system responsive during traffic surges but also provides a more predictable environment for autoscaling. When combined with well-configured autoscalers, buffer nodes help prevent overloading existing nodes and facilitate smoother scaling, reducing the risk of resource contention and performance degradation.
 
 This is actually also another point for setting up resource limits: You will be much happier setting the number of buffer nodes you need, because they are relative to your resource requirements.
-If you want to be able to double the workload you usually have quickly, they will give you at least some metric to start with.
+If you want to be able to double the workload that you usually have quickly, they will give you at least some metric to start with.
+Increasing the replicas for your deployment and just letting them idle, could also work the same way, but this approach is much more dynamic, especially when you have more than one workload in your cluster, or your system consists of multiple microservices with different concerns.
 
 **Advantages of overprovisioning**:
 
@@ -190,7 +192,6 @@ Proactive resource monitoring enables you to anticipate and prepare for scaling 
 By incorporating buffer nodes and regular resource monitoring into your Kubernetes strategy, you can create a more resilient and predictable environment for your application. These practices, combined with sensible resource limits, ensure that your cluster can respond effectively to changing demand while maintaining a high level of service quality. Now, there is no guarantee that there still wont be a spike or DDOS that will impact your service quality, but this will be an excellent start for your services to achie true HA.
 
 Together, buffer nodes and resource monitoring empower you to plan scaling events more effectively, helping you to strike the right balance between resource allocation and application performance. As a result, you can deliver a seamless user experience, even when faced with unexpected traffic spikes or fluctuations in demand.
-
 
 
 ## Best Practices for Managing Kubernetes CPU Limits
