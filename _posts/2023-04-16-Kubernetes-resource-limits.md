@@ -10,7 +10,7 @@ tags: [kubernetes, autoscaling, hpa, automation, overprovisioning]
 
 In Kubernetes, setting resource limits can help you manage your cluster's resources more effectively. However, whether you set resource limits or not, there will always be a chance that some users are left out due to resource constraints or workload spikes. To ensure the best user experience and maintain high availability, it is crucial to design buffered workloads and configure your autoscalers to compensate for fluctuations in demand.
 
-In this article, we will explore the importance of overprovisioning workloads and how to set up autoscalers (mainly the [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)) in Kubernetes to optimize resource utilization and provide a seamless user experience, regardless of whether resource limits are set or not. Through this balanced approach, you can achieve a more robust and resilient application infrastructure that meets the needs of your users even in the face of fluctuating demand.
+In this article, we will explore the importance of overprovisioning workloads and how to set up autoscalers (mainly the [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)) in Kubernetes to optimize resource utilization and provide a seamless user experience, regardless of whether resource limits are set or not. Through this balanced approach, you can achieve a more robust and resilient application infrastructure that meets the needs of your users even in the face of fluctuating demand. It also asumes that you are using the [cluster-autoscaler](https://github.com/kubernetes/autoscaler) to dynamically scale your cluster nodes.
 
 ***TLDR***
 > By implementing buffered workloads, you can create a cushion that allows your application to handle sudden increases in traffic or resource usage more gracefully. This approach helps prevent users from experiencing degraded performance or service outages during peak times. Combined with well-configured autoscalers, this strategy ensures that your cluster can dynamically adjust to changes in demand, scaling up or down as needed to accommodate user requests.
@@ -243,12 +243,21 @@ workload   Deployment/workload/scale    200 / 100    1         10        2      
 
 In addition to resource requests and limits, you can use Kubernetes features like Pod Priority and Preemption to ensure that critical workloads have the necessary resources even during resource contention. Pod Priority and Preemption allow Kubernetes to evict lower-priority pods first to make room for higher-priority ones when resources are scarce, however, there are ultimately limited resources available on a node.
 
+### Bonus: About Cluster Autoscaler
+
+The Cluster Autoscaler is a sophisticated tool designed to automatically modify the size of a Kubernetes cluster based on certain conditions. It primarily addresses two scenarios: first, when pods in the cluster fail to run due to a lack of available resources; and second, when nodes within the cluster are underutilized over a prolonged duration and the pods they host can be efficiently reassigned to other existing nodes.
+
+By dynamically adapting the cluster size, the Cluster Autoscaler ensures optimal resource allocation, minimizing the occurrence of resource-related issues while maximizing the overall efficiency of the cluster. This provides a robust and efficient solution for managing Kubernetes clusters in various environments, ultimately delivering a more streamlined and professional experience for users.
+
+You can find out if it works on your cloud out of the box right in the [kubernetes github org for autoscalers](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler)
 
 ### Sources
-[Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
-[HPA Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
-[How to Fix OOMKilled Kubernetes Error (Exit Code 137)](https://komodor.com/learn/how-to-fix-oomkilled-exit-code-137/)
-[Kubecost](https://www.kubecost.com/)
-[Kubecost Docs](https://docs.kubecost.com/)
-[Metrics-Server](https://github.com/kubernetes-sigs/metrics-server)
+* [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
+* [HPA Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
+* [Cluster Autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler)
+* [More Kubernetes Autoscaler](https://github.com/kubernetes/autoscaler)
+* [How to Fix OOMKilled Kubernetes Error (Exit Code 137)](https://komodor.com/learn/how-to-fix-oomkilled-exit-code-137/)
+* [Kubecost](https://www.kubecost.com/)
+* [Kubecost Docs](https://docs.kubecost.com/)
+* [Metrics-Server](https://github.com/kubernetes-sigs/metrics-server)
 
