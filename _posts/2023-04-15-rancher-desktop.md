@@ -6,7 +6,7 @@ categories: kubernetes
 tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
 ---
 
-In this article I would like to introduce rancher-desktop to those who dont know it yet. I have recently switched away from docke-desktop and am now a happy little camper with a lot of joy while wokring.
+In this article I would like to introduce rancher-desktop to those who dont know it yet. I have recently switched away from docker-desktop and am now a happy little camper with a lot of joy while working. I already love K3s and having a no-brain-needed deployment on the workstation is a huge plus.
 
 **TLDR**
 > Rancher Desktop, is a must-have tool for professional Kubernetes engineers looking to simplify container management and Kubernetes configuration on the (Windows) Desktop, all while benefiting from a reliable, proven foundation and the expertise of a global leader in open source solutions. By embracing the open source community and overcoming Docker's shortcomings, Rancher Desktop is the ideal choice for today's Kubernetes professionals. With its versatility, ease of use, and commitment to open source, Rancher Desktop is my go-to tool for Kubernetes management.
