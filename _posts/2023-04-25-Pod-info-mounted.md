@@ -24,14 +24,13 @@ This is a detailed list of fields that can be used with the it and the methods t
    - The name of the pod.
 
 2. metadata.namespace (Both)
-   The namespace the pod is running in.
+   - The namespace the pod is running in.
 
 3. metadata.labels (Volume files)
    - A set of key-value pairs (labels) attached to the pod.
 
 4. metadata.annotations (Volume files)
    - A set of key-value pairs (annotations) providing additional non-identifying information about the pod.
-
 
 5. status.podIP (Environment variables)
    - The IP address of the pod.
