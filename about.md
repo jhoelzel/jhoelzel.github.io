@@ -35,9 +35,9 @@ Kubernetes cluster types:
 Distributions:
 
 - Vanilla Kubernetes
+- Cloud Kubernetes (AKS EKS)
 - K3S
 - Rancher RKE
-- Micro-k8s
 - Rancher desktop
 - Harvester
 
@@ -64,6 +64,7 @@ Interesting things:
 - Storage and Backups with longhorn
 
 Github excerpts:
+- go-wait-for-k8s is a utility program written in Go that monitors the readiness of Kubernetes resources like Pods, Jobs, Deployments, StatefulSets, DaemonSets, and ReplicaSets. The program checks the readiness status of the specified resources in a given namespace at a specified interval and exits once all resources are ready or if the optional timeout is reached. <https://github.com/jhoelzel/go_wait_for_k8s>
 - SpInvalidFileNameFinder is a command-line tool written in Go that helps you find and optionally rename files and folders with invalid names for SharePoint.<https://github.com/jhoelzel/SpInvalidFileNameFinder>
 - Consoleman is a command-line utility that acts like Postman but runs in the console. You can use it to send HTTP requests to APIs and inspect the responses.
 Disclaimer: I am aware that this does not much more than curl, but it is an exercise using ASCII interfaces with golang and to prove the point that it is possible without dependencies. <https://github.com/jhoelzel/consoleman>
