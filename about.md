@@ -2,7 +2,10 @@
 layout: about
 title: About me
 ---
-<div style="text-align:center">![Me](https://avatars.githubusercontent.com/u/30208763?v=4)</div>
+
+<img src="https://avatars.githubusercontent.com/u/30208763?v=4"
+     alt="Me"
+     style="text-align:center" />
 <h2 align="center">Hi 👋, I'm Johannes</h2>
 
 **I talk to humans and machines and specialize in golang, kubernetes as well as automating everything!**
