@@ -3,8 +3,8 @@ layout: about
 title: About me
 ---
 
-<img src="https://avatars.githubusercontent.com/u/30208763?v=4" alt="Me"style="width: 100px;float: left;padding: 1rem;" />
-<h2 >Hi 👋, I'm Johannes</h2>
+<img src="https://avatars.githubusercontent.com/u/30208763?v=4" alt="Me" style="width: 100px;float: left;padding: 1rem;" />
+<h2>Hi 👋, I'm Johannes</h2>
 
 **I talk to humans and machines and specialize in golang, kubernetes as well as automating everything!**
 
