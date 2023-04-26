@@ -2,7 +2,7 @@
 layout: about
 title: About me
 ---
-
+<div style="text-align:center">![Me](https://avatars.githubusercontent.com/u/30208763?v=4)</div>
 <h2 align="center">Hi 👋, I'm Johannes</h2>
 
 **I talk to humans and machines and specialize in golang, kubernetes as well as automating everything!**
@@ -19,35 +19,33 @@ I am currently offering my services as a freelancer and would be happy to discus
 
 All of this makes me an ideal candidate if you are seeking a senior-level professional who is flexible, collaborative, and hands-on. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
-## kubernetes experience includes
+## kubernetes experience
 
 **Kubernetes cluster types**:
-
-- AKS, Bare-metal, Edge server, EKS, Hetzner-cloud, Multi-node, Multi-node, multi AZ, Single-Node
+- AKS, Bare-metal, Edge server, EKS, Hetzner-cloud, multi AZ, Single-Node
 
 **Distributions**:
-
 - Cloud Kubernetes (AKS EKS), Harvester, K3S, Rancher desktop, Rancher RKE, Vanilla Kubernetes
 
 **Operators created**:
-
 - Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day
 
-### Interesting things I have done with kubernetes
+### Interesting accomplishments in Kubernetes
 
-- CSI compliant bare metal clusters
-- BGP Peer integration with Calico
-- IPV6/IPV4/dualstack bare-metal clusters with Calico
-- Cluster to cluster migrations
-- Helm to kustomize migrations
-- automated dns and certificates (certmanager/externaldns)
-- OIDC SSO Login for the cluster and its applications
-- Deployment of VOIP Applications to kubernetes
-- GitOps with Gitlab, Github, bitbucket, ArgoCD
-- Bare-metal ingress load balancing with ha-proxy and Traefik
-- Cost management depending on kubecost
-- Storage and Backups with longhorn
-- arm deployments on hetzner for the control plane with amd64 and arm nodes
+- Deployed bare-metal clusters using on-premise hardware
+- Implemented CSI-compliant bare-metal clusters
+- Integrated BGP Peer with Calico for enhanced networking
+- Configured IPV6/IPV4/dual-stack bare-metal clusters using Calico
+- Executed cluster-to-cluster migrations
+- Transitioned from Helm to Kustomize for resource management
+- Automated DNS and certificates management with Cert-Manager and ExternalDNS
+- Enabled OIDC Single Sign-On (SSO) for both cluster and application access
+- Deployed VOIP applications on Kubernetes
+- Implemented GitOps using GitLab, GitHub, Bitbucket, and ArgoCD
+- Managed bare-metal ingress load balancing using HAProxy and Traefik
+- Utilized Kubecost for effective cost management
+- Managed storage and backups using Longhorn
+- Deployed ARM architecture on Hetzner for the control plane with AMD64 and ARM nodes
 
 ## Github Excerpts
 
@@ -75,7 +73,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
    - A Kubernetes cron job image with one task: change a deployment depending on whether it's day or night. Showcasing how easily the Kubernetes API can be implemented directly into your code in multiple ways.
    - [Repository](https://github.com/jhoelzel/cronor)
 
-7. **Ingress and Egress with the same IP on Azure**
+7. **Ingress and Egress with the same IP on Azure and Terraform**
    - [Repository](https://github.com/jhoelzel/aks_ingress_egress_same_ip)
 
 8. **DevContainers**
@@ -163,7 +161,6 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 - **Design Thinking**
 
 ## general experience
-
 - Fullstack (Frontend, Backend, APIs, Daemons, Operators, Infrastructure-Orchestration)
 - Favorites: Golang, JavaScript, PHP, C#
 - Cloud: AWS, Azure, Hetzner, OVH, Contabo, Bare-Metal
@@ -174,7 +171,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 - Jira / Redmine / Trello
 
 ### Languages
-**Deutsch*`*
+**Deutsch**
 - Native or bilingual proficiency
 
 **Englisch**
