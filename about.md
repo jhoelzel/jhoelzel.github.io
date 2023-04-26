@@ -21,34 +21,19 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 ### kubernetes experience includes
 
-Kubernetes cluster types:
+**Kubernetes cluster types**:
 
-- bare-metal
-- AKS
-- EKS
-- Hetzner-cloud
-- Edge server
-- Single-Node
-- Multi-node
-- Multi-node, multi AZ
+- AKS, Bare-metal, Edge server, EKS, Hetzner-cloud, Multi-node, Multi-node, multi AZ, Single-Node
 
-Distributions:
+**Distributions**:
 
-- Vanilla Kubernetes
-- Cloud Kubernetes (AKS EKS)
-- K3S
-- Rancher RKE
-- Rancher desktop
-- Harvester
+- Cloud Kubernetes (AKS EKS), Harvester, K3S, Rancher desktop, Rancher RKE, Vanilla Kubernetes
 
-Created operators:
+**Operators created**:
 
-- MySQL DB deployments
-- Application deployments
-- Annotation of existing services
-- Scaling of deployments depending on the time and day
+- Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day
 
-Interesting things:
+## Interesting things I have done with kubernetes
 
 - CSI compliant bare metal clusters
 - BGP Peer integration with Calico
@@ -62,17 +47,119 @@ Interesting things:
 - Bare-metal ingress load balancing with ha-proxy and Traefik
 - Cost management depending on kubecost
 - Storage and Backups with longhorn
+- arm deployments on hetzner for the control plane with amd64 and arm nodes
 
-Github excerpts:
-- go-wait-for-k8s is a utility program written in Go that monitors the readiness of Kubernetes resources like Pods, Jobs, Deployments, StatefulSets, DaemonSets, and ReplicaSets. The program checks the readiness status of the specified resources in a given namespace at a specified interval and exits once all resources are ready or if the optional timeout is reached. It also included self-version-bumping using tags and automated container image build processes on commit to master <https://github.com/jhoelzel/go_wait_for_k8s>
-- SpInvalidFileNameFinder is a command-line tool written in Go that helps you find and optionally rename files and folders with invalid names for SharePoint.<https://github.com/jhoelzel/SpInvalidFileNameFinder>
-- Consoleman is a command-line utility that acts like Postman but runs in the console. You can use it to send HTTP requests to APIs and inspect the responses.
-Disclaimer: I am aware that this does not much more than curl, but it is an exercise using ASCII interfaces with golang and to prove the point that it is possible without dependencies. <https://github.com/jhoelzel/consoleman>
-- Simpleapp is a simple app that defines a basic kubernetes app i use in my trainings. It contains a simple MVC structure for packages, a Mux subrouter integration, kube manifests and an easy to learn structure. <https://github.com/jhoelzel/simpleapp>
-- Auto Updating base images This image is based on mcr.microsoft.com/azure-cli and integrates mongodb-tools in order to easily backup databases in a production aks. <https://github.com/jhoelzel/docker-azure_cli-mongodb_tools>
-- Cronor is a kubernetes cron job image with one task: change our deployment depending if it's day or night. This is a showcase of how easily the kubernetes api can be implemented directly into your code in multiple ways.  <https://github.com/jhoelzel/cronor>
-- Ingress and Egress with the same IP on Azure <https://github.com/jhoelzel/aks_ingress_egress_same_ip>
-- DevContainers: Over the years I noticed that I have been throwing away a lot of nice dockerfiles and this repository is deemed to change that.<https://github.com/jhoelzel/devcontainer>
+## Github Excerpts
+
+1. **go-wait-for-k8s**
+   - A utility program written in Go that monitors the readiness of Kubernetes resources like Pods, Jobs, Deployments, StatefulSets, DaemonSets, and ReplicaSets.
+   - [Repository](https://github.com/jhoelzel/go_wait_for_k8s)
+
+2. **SpInvalidFileNameFinder**
+   - A command-line tool written in Go that helps you find and optionally rename files and folders with invalid names for SharePoint.
+   - [Repository](https://github.com/jhoelzel/SpInvalidFileNameFinder)
+
+3. **Consoleman**
+   - A command-line utility that acts like Postman but runs in the console. You can use it to send HTTP requests to APIs and inspect the responses.
+   - [Repository](https://github.com/jhoelzel/consoleman)
+
+4. **Simpleapp**
+   - A simple app that defines a basic Kubernetes app used in trainings, containing a simple MVC structure for packages, a Mux subrouter integration, kube manifests, and an easy-to-learn structure.
+   - [Repository](https://github.com/jhoelzel/simpleapp)
+
+5. **Auto Updating base images**
+   - This image is based on `mcr.microsoft.com/azure-cli` and integrates `mongodb-tools` in order to easily backup databases in a production AKS.
+   - [Repository](https://github.com/jhoelzel/docker-azure_cli-mongodb_tools)
+
+6. **Cronor**
+   - A Kubernetes cron job image with one task: change a deployment depending on whether it's day or night. Showcasing how easily the Kubernetes API can be implemented directly into your code in multiple ways.
+   - [Repository](https://github.com/jhoelzel/cronor)
+
+7. **Ingress and Egress with the same IP on Azure**
+   - [Repository](https://github.com/jhoelzel/aks_ingress_egress_same_ip)
+
+8. **DevContainers**
+   - A collection of Dockerfiles for various development environments.
+   - [Repository](https://github.com/jhoelzel/devcontainer)
+
+### 📩 Latest Blog Posts 
+<!-- BLOG-POST-LIST:START -->
+- `2023-04-25` | [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
+- `2023-04-17` | [Kubernetes SSO with OIDC and GitLab in k3s](https://www.hoelzel.it/kubernetes/2023/04/17/k3s-gitlab-oidc-copy.html)  
+- `2023-04-16` | [Taming Traffic Spikes in Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/16/Kubernetes-resource-limits.html)  
+- `2023-04-15` | [Simplifying Kubernetes Developement with Rancher Desktop](https://www.hoelzel.it/kubernetes/2023/04/15/rancher-desktop.html)  
+- `2023-04-12` | [Controllers vs. Operators and when to use which](https://www.hoelzel.it/kubernetes/2023/04/12/Kubernetes-Operators-vs-Controller.html)  
+- `2023-04-01` | [Comparing k3s with Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html)  
+- `2023-03-21` | [Unleashing Kubernetes Full Potential with GitOps and ArgoCD](https://www.hoelzel.it/kubernetes/2023/03/21/gitops-argocd-kubernetes-a-match-made-in-heaven.html)  
+- `2023-03-10` | [GitOps and Agile … Like Bread and Butter](https://www.hoelzel.it/gitops/2023/03/10/GitOps-and-Agile-Like-Bread-and-Butter.html)  
+- `2022-09-01` | [Compare kustomize overlays](https://www.hoelzel.it/cli/2022/09/01/compare-kustomize-overlays.html)  
+- `2022-08-06` | [Restarting a container without downtime](https://www.hoelzel.it/kubectl/2022/08/06/restart-pod-without-downtime.html)  
+<!-- BLOG-POST-LIST:END -->
+## Licenses & Certifications
+
+- **Certified Kubernetes Security Specialist (CKS) Complete Course**
+  - LevelUp360° DevOps | GCP | Terraform | Kubernetes | Ansible on Udemy
+  - _Kubernetes_ _Cybersecurity_
+
+- **Azure Kubernetes Service with Azure DevOps and Terraform**
+  - Kalyan Reddy Daida on Udemy
+  - _Kubernetes_ _Azure_
+
+- **AWS Fargate & ECS - Masterclass | Microservices, Docker, CFN**
+  - Kalyan Reddy Daida on Udemy
+  - _AWS_
+
+- **AWS Certified Cloud Practitioner - Complete NEW Course 2021**
+  - Neal Davis on Udemy
+  - _AWS_
+
+- **AWS EKS Kubernetes-Masterclass | DevOps, Microservices**
+  - Kalyan Reddy Daida on Udemy
+  - _Kubernetes_ _AWS_
+
+- **Certified Kubernetes Administrator (CKA) with Practice Tests**
+  - Mumshad Mannambeth, KodeKloud Training on Udemy
+  - _Kubernetes_
+
+- **Mastering Go Programming**
+  - Packt Publishing on Udemy
+  - _Golang_
+
+## Courses
+
+- **Configuring and Managing Kubernetes Networking, Services, and Ingress** by Anthony Nocentino
+  - _Kubernetes_
+
+- **Configuring and Managing Kubernetes Security** by Anthony Nocentino
+  - _Kubernetes_
+
+- **Creating Custom Resources in Kubernetes** by Zachary Bennett
+  - _Kubernetes_
+
+- **Deploying and Managing Azure Kubernetes Service (AKS) Clusters** By Ben Weissman, and Anthony Nocentino
+  - _Kubernetes_
+
+- **Learn terraform by setting up Highly available wordpress**
+  - _Terraform_
+
+- **Managing Advanced Kubernetes Logging and Tracing** by Piotr Gaczkowski
+  - _Kuberenetes_
+
+- **Managing Apps on Kubernetes with Istio** by Elton Stoneman
+  - _Kubernetes_
+
+- **Monitoring and Scaling Applications in Kubernetes** By Tapan Ghatalia
+  - _Kubernetes_
+
+- **gRPC [Golang] Master Class: Build Modern API & Microservices** by Stephane Maarek
+  - _Golang_
+
+- **Psychological assessment systems that measure occupational competencies, personality and interests**
+  - [www.therocinstitute.com](http://www.therocinstitute.com)
+
+- **Scrum Master**
+
+- **Design Thinking**
 
 ### general experience
 
