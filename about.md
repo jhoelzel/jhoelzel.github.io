@@ -19,7 +19,7 @@ I am currently offering my services as a freelancer and would be happy to discus
 
 All of this makes me an ideal candidate if you are seeking a senior-level professional who is flexible, collaborative, and hands-on. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
-### kubernetes experience includes
+## kubernetes experience includes
 
 **Kubernetes cluster types**:
 
@@ -33,7 +33,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 - Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day
 
-## Interesting things I have done with kubernetes
+### Interesting things I have done with kubernetes
 
 - CSI compliant bare metal clusters
 - BGP Peer integration with Calico
@@ -82,7 +82,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
    - A collection of Dockerfiles for various development environments.
    - [Repository](https://github.com/jhoelzel/devcontainer)
 
-### 📩 Latest Blog Posts 
+## Latest Blog Posts 
 <!-- BLOG-POST-LIST:START -->
 - `2023-04-25` \| [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
 - `2023-04-17` \| [Kubernetes SSO with OIDC and GitLab in k3s](https://www.hoelzel.it/kubernetes/2023/04/17/k3s-gitlab-oidc-copy.html)  
@@ -95,7 +95,8 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 - `2022-09-01` \| [Compare kustomize overlays](https://www.hoelzel.it/cli/2022/09/01/compare-kustomize-overlays.html)  
 - `2022-08-06` \| [Restarting a container without downtime](https://www.hoelzel.it/kubectl/2022/08/06/restart-pod-without-downtime.html)  
 <!-- BLOG-POST-LIST:END -->
-## Licenses & Certifications
+
+## Certifications
 
 - **Certified Kubernetes Security Specialist (CKS) Complete Course**
   - LevelUp360° DevOps \| GCP \| Terraform \| Kubernetes \| Ansible on Udemy
@@ -161,7 +162,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 - **Design Thinking**
 
-### general experience
+## general experience
 
 - Fullstack (Frontend, Backend, APIs, Daemons, Operators, Infrastructure-Orchestration)
 - Favorites: Golang, JavaScript, PHP, C#
@@ -172,7 +173,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 - Location Networking, VPN (Wireguard, Software, MS-VPN)
 - Jira / Redmine / Trello
 
-## Languages
+### Languages
 **Deutsch*`*
 - Native or bilingual proficiency
 
