@@ -84,28 +84,28 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 ### 📩 Latest Blog Posts 
 <!-- BLOG-POST-LIST:START -->
-- `2023-04-25` | [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
-- `2023-04-17` | [Kubernetes SSO with OIDC and GitLab in k3s](https://www.hoelzel.it/kubernetes/2023/04/17/k3s-gitlab-oidc-copy.html)  
-- `2023-04-16` | [Taming Traffic Spikes in Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/16/Kubernetes-resource-limits.html)  
-- `2023-04-15` | [Simplifying Kubernetes Developement with Rancher Desktop](https://www.hoelzel.it/kubernetes/2023/04/15/rancher-desktop.html)  
-- `2023-04-12` | [Controllers vs. Operators and when to use which](https://www.hoelzel.it/kubernetes/2023/04/12/Kubernetes-Operators-vs-Controller.html)  
-- `2023-04-01` | [Comparing k3s with Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html)  
-- `2023-03-21` | [Unleashing Kubernetes Full Potential with GitOps and ArgoCD](https://www.hoelzel.it/kubernetes/2023/03/21/gitops-argocd-kubernetes-a-match-made-in-heaven.html)  
-- `2023-03-10` | [GitOps and Agile … Like Bread and Butter](https://www.hoelzel.it/gitops/2023/03/10/GitOps-and-Agile-Like-Bread-and-Butter.html)  
-- `2022-09-01` | [Compare kustomize overlays](https://www.hoelzel.it/cli/2022/09/01/compare-kustomize-overlays.html)  
-- `2022-08-06` | [Restarting a container without downtime](https://www.hoelzel.it/kubectl/2022/08/06/restart-pod-without-downtime.html)  
+- `2023-04-25` \| [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
+- `2023-04-17` \| [Kubernetes SSO with OIDC and GitLab in k3s](https://www.hoelzel.it/kubernetes/2023/04/17/k3s-gitlab-oidc-copy.html)  
+- `2023-04-16` \| [Taming Traffic Spikes in Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/16/Kubernetes-resource-limits.html)  
+- `2023-04-15` \| [Simplifying Kubernetes Developement with Rancher Desktop](https://www.hoelzel.it/kubernetes/2023/04/15/rancher-desktop.html)  
+- `2023-04-12` \| [Controllers vs. Operators and when to use which](https://www.hoelzel.it/kubernetes/2023/04/12/Kubernetes-Operators-vs-Controller.html)  
+- `2023-04-01` \| [Comparing k3s with Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html)  
+- `2023-03-21` \| [Unleashing Kubernetes Full Potential with GitOps and ArgoCD](https://www.hoelzel.it/kubernetes/2023/03/21/gitops-argocd-kubernetes-a-match-made-in-heaven.html)  
+- `2023-03-10` \| [GitOps and Agile … Like Bread and Butter](https://www.hoelzel.it/gitops/2023/03/10/GitOps-and-Agile-Like-Bread-and-Butter.html)  
+- `2022-09-01` \| [Compare kustomize overlays](https://www.hoelzel.it/cli/2022/09/01/compare-kustomize-overlays.html)  
+- `2022-08-06` \| [Restarting a container without downtime](https://www.hoelzel.it/kubectl/2022/08/06/restart-pod-without-downtime.html)  
 <!-- BLOG-POST-LIST:END -->
 ## Licenses & Certifications
 
 - **Certified Kubernetes Security Specialist (CKS) Complete Course**
-  - LevelUp360° DevOps | GCP | Terraform | Kubernetes | Ansible on Udemy
+  - LevelUp360° DevOps \| GCP \| Terraform \| Kubernetes \| Ansible on Udemy
   - _Kubernetes_ _Cybersecurity_
 
 - **Azure Kubernetes Service with Azure DevOps and Terraform**
   - Kalyan Reddy Daida on Udemy
   - _Kubernetes_ _Azure_
 
-- **AWS Fargate & ECS - Masterclass | Microservices, Docker, CFN**
+- **AWS Fargate & ECS - Masterclass \| Microservices, Docker, CFN**
   - Kalyan Reddy Daida on Udemy
   - _AWS_
 
@@ -113,7 +113,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
   - Neal Davis on Udemy
   - _AWS_
 
-- **AWS EKS Kubernetes-Masterclass | DevOps, Microservices**
+- **AWS EKS Kubernetes-Masterclass \| DevOps, Microservices**
   - Kalyan Reddy Daida on Udemy
   - _Kubernetes_ _AWS_
 
@@ -172,6 +172,15 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 - Location Networking, VPN (Wireguard, Software, MS-VPN)
 - Jira / Redmine / Trello
 
+## Languages
+**Deutsch*`*
+- Native or bilingual proficiency
+
+**Englisch**
+- Native or bilingual proficiency
+
+**Spanisch**
+- Limited working proficiency
 
 ### You can reach me on LinkedIn
 
