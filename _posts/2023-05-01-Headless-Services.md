@@ -6,9 +6,9 @@ categories: kubernetes
 tags: [kubernetes, kubernetes-services, kubernetes-headless-services]
 ---
 
-Kubernetes services are abstractions that define a logical set of pods and a policy to access them. Services enable loose coupling between pods and provide a **stable IP address**, DNS name, and load balancing for distributing network traffic.
+**Kubernetes services** are abstractions that define a logical set of pods and a policy to access them. Services enable loose coupling between pods and **provide a stable IP address**, DNS name, and load balancing for distributing network traffic.
 
-Headless Services are a special type of Kubernetes service that allow for more direct control over pod-to-pod communication and service discovery, particularly useful for stateful applications and custom load balancing scenarios.
+**Headless Services do not provide a stable IP address** are a special type of Kubernetes service that allow for more direct control over pod-to-pod communication and service discovery, particularly useful for stateful applications and custom load balancing scenarios.
 
 ## What are Kubernetes Headless Services?
 
