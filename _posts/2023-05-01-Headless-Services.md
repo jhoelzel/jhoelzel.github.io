@@ -211,7 +211,8 @@ In order to check this out we first need to create a busybox container in the sa
 ```SH
 $ kubectl run -i --tty dnsutils --image=tutum/dnsutils --restart=Never -- sh
 If you don't see a command prompt, try pressing enter.
-# dig _http._tcp.my-headless-service.default.svc.cluster.local SRV
+# 
+dig _http._tcp.my-headless-service.default.svc.cluster.local SRV
 
 ; <<>> DiG 9.9.5-3ubuntu0.2-Ubuntu <<>> _http._tcp.my-headless-service.default.svc.cluster.local SRV
 ;; global options: +cmd
@@ -330,7 +331,6 @@ The StatefulSet maintains a unique identity for each of its pods and ensures tha
 
 ```SH
 kubectl run -i --tty dnsutils --image=tutum/dnsutils --restart=Never -- sh
-
 If you don't see a command prompt, try pressing enter.
 dig my-headless-service.default.svc.cluster.local A
 
@@ -360,7 +360,8 @@ my-headless-service.default.svc.cluster.local. 5 IN A 10.42.0.146
 So far the Answer section looks pretty much the same as for the deployment, but watch what happens if we quere the SRV record:
 
 ```SH
-# dig _http._tcp.my-headless-service.default.svc.cluster.local SRV
+# 
+dig _http._tcp.my-headless-service.default.svc.cluster.local SRV
 
 ; <<>> DiG 9.9.5-3ubuntu0.2-Ubuntu <<>> _http._tcp.my-headless-service.default.svc.cluster.local SRV
 ;; global options: +cmd
