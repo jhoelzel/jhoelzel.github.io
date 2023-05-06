@@ -169,7 +169,7 @@ $ kubectl get endpoints my-headless-service --output=json
 ```
 
 ### Discovering pods with DNS
-
+Now let us create a dnsutils container in the same namespace. With it, we can perform an dig command to query the A records for the headless service
 ```SH
 $ kubectl run -i --tty dnsutils --image=tutum/dnsutils --restart=Never -- sh
 If you don't see a command prompt, try pressing enter.
@@ -198,6 +198,8 @@ my-headless-service.default.svc.cluster.local. 5 IN A 10.42.0.138
 ;; WHEN: Tue May 02 08:55:22 U
 ```
 
+As you can see in the Answer Section, all Ips of the replicas have been nicely returned to us. This will help us connect directly through them. 
+
 ### Using SRV records for service discovery 
 
 SRV records are a type of DNS record that provides additional information beyond just the IP address of a service. They are particularly useful for service discovery within a cluster, allowing applications to obtain information about available pod instances and their respective ports.
@@ -206,7 +208,7 @@ An SRV record is a DNS record with the format: `_service._protocol.<service_name
 
 This is especially useful for stateful applications that require direct pod-to-pod communication, as well as for custom load balancing scenarios where the built-in Kubernetes load balancing is not sufficient.
 
-In order to check this out we first need to create a busybox container in the same namespace. Next, we can perform an dig command to query the SRV records for the headless service:
+In order to check this out we first need to create a dnsutils container in the same namespace. Next, we can perform an dig command to query the SRV records for the headless service:
 
 ```SH
 $ kubectl run -i --tty dnsutils --image=tutum/dnsutils --restart=Never -- sh
