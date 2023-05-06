@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kubernetes Headless Services
-subtitle: harness the power of Pod and container fields within containers
+subtitle: what are they and how can we use them
 categories: kubernetes
 tags: [kubernetes, kubernetes-services, kubernetes-headless-services]
 ---
@@ -198,7 +198,10 @@ my-headless-service.default.svc.cluster.local. 5 IN A 10.42.0.138
 ;; WHEN: Tue May 02 08:55:22 U
 ```
 
-As you can see in the Answer Section, all Ips of the replicas have been nicely returned to us. This will help us connect directly through them. 
+As you can see in the Answer Section, all IPs of the replicas have been nicely returned to us. This will help us connect directly through them, however the hostname remains the same.
+Most DNS query programs will not make sure that you rotate the IP and will only connect the first one and provide no load balancing whatsoever.
+
+
 
 ### Using SRV records for service discovery 
 
