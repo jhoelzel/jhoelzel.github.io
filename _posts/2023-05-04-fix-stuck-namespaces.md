@@ -177,7 +177,8 @@ Inspect the CRDs to determine if any are associated with the Namespace you are t
 Delete any associated CRD instances within the Namespace:
 
 ```SH
-kubectl delete <custom_resource_name>.<api_group> -n <namespace_name> --all
+kubectl delete <custom_resource_name>.<api_group> -n <namespace_name> 
+```
 If necessary, remove the CRD itself after deleting its instances:
 
 ```SH
