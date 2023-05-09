@@ -45,7 +45,7 @@ In a nutshell, etcd is a steadfast sentinel keeping distributed systems, like Ku
 
 Traditional databases like MySQL and PostgreSQL prioritize consistency and durability, but their fault tolerance capabilities depend on the specific setup and configuration. While etcd is ideal for managing critical information in distributed systems, MySQL and PostgreSQL are versatile relational databases that handle structured data with relationships. 
 
-> NOTE: Of course you can also store cluster state in a relational database, (K3S)[k3s.io] will happily do that for you, but once you actually get it up and running your MySQL setup will literally be overtaken by state queries. I have tried on many occasions to make it work, and an effective system WILL require absolute finetuning from your end.
+> NOTE: Of course you can also store cluster state in a relational database, [K3S](k3s.io) will happily do that for you, but once you actually get it up and running your MySQL setup will literally be overtaken by state queries. I have tried on many occasions to make it work, and an effective system WILL require absolute finetuning from your end.
 
 ## Etcd's Ecosystem and Extensibility
 
@@ -63,7 +63,7 @@ The etcd community continues to grow and evolve, contributing to the development
 *[etcd-backup-operator](https://github.com/giantswarm/etcd-backup-operator)* takes backups of ETCD instances on both the control plane and tenant clusters.
 *[ETCD Manager](https://github.com/gtamas/etcdmanager)* Provide an efficient, modern GUI for desktop
 
-A more extensive list of tools and libraries can be found in the (etcd docs itself)[https://etcd.io/docs/v3.5/integrations/]
+A more extensive list of tools and libraries can be found in the (etcd docs itself](https://etcd.io/docs/v3.5/integrations/]
 
 ## Things to consider when Deploying and Managing etcd
 
@@ -82,6 +82,6 @@ etcd is a robust and reliable distributed key-value store that quietly underpins
 As the etcd ecosystem continues to flourish, and best practices for its deployment and management are widely adopted, the future looks promising for this unsung hero. With etcd, distributed systems can thrive and achieve their full potential, all while maintaining harmony and consistency in the face of ever-growing complexity.
 
 ### Sources
-- (Etcd docs)[https://etcd.io/docs/v3.5/]
-- (Developer Guide)[https://etcd.io/docs/v3.5/dev-guide/]
-- (Operation Guide)[https://etcd.io/docs/v3.5/op-guide/]
+- [etcd docs](https://etcd.io/docs/v3.5/)
+- [Developer Guide](https://etcd.io/docs/v3.5/dev-guide/)
+- [Operation Guide](https://etcd.io/docs/v3.5/op-guide/)
