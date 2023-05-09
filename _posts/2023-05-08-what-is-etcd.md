@@ -67,7 +67,7 @@ A more extensive list of tools and libraries can be found in the (etcd docs itse
 
 ## Things to consider when Deploying and Managing etcd
 
-As custodians of complex distributed systems, senior engineers understand the importance of deploying and managing etcd with care. Adhering to best practices is essential to ensure the health and performance of an etcd cluster. Some key recommendations include:
+As custodians of complex distributed systems, engineers need to understand the importance of deploying and managing etcd with care. Adhering to best practices is essential to ensure the health and performance of an etcd cluster. Some key recommendations include:
 
 **Hardware considerations**: Use SSDs for storage, as etcd's performance relies heavily on disk speed. Provide adequate memory and CPU resources to accommodate the cluster's workloads.
 **Configuration**: Tune etcd's configuration parameters to optimize performance for your specific use case, considering factors like network latency and data size.
@@ -77,7 +77,7 @@ As custodians of complex distributed systems, senior engineers understand the im
 
 ## In Conclusion
 
-etcd is a robust and reliable distributed key-value store that quietly underpins distributed systems like Kubernetes. Its fully replicated, highly available, reliable, fast, secure, and simple design ensures that it remains a steadfast guardian of critical information in distributed systems. With its unique advantages over Redis, MySQL, and PostgreSQL in the realm of distributed system configuration management, etcd has earned its place as an essential tool for senior engineers.
+etcd is a robust and reliable distributed key-value store that quietly underpins distributed systems like Kubernetes. Its fully replicated, highly available, reliable, fast, secure, and simple design ensures that it remains a steadfast guardian of critical information in distributed systems. With its unique advantages over Redis, MySQL, and PostgreSQL in the realm of distributed system configuration management, etcd has earned its place as an essential tool for distributed systems.
 
 As the etcd ecosystem continues to flourish, and best practices for its deployment and management are widely adopted, the future looks promising for this unsung hero. With etcd, distributed systems can thrive and achieve their full potential, all while maintaining harmony and consistency in the face of ever-growing complexity.
 
