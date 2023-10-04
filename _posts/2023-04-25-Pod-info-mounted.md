@@ -334,6 +334,18 @@ spec:
 
 
 ```
+## mount a specific annotation as environment variable
+/E: 04.10.23
+
+One of my readers pointed out, that it is indeed possible to mount a specific annotation as an environment variable into a pod by usin the fieldPath ``metadata.annotations[yourAnnotation]`` which will be plenty usefull for directly mounting an annotation.
+```
+      env:
+        - name: SOME_ANNOTATION
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations[k8s.io/some-annotation]
+```
+**However** please be aware that, opposed to a volumemount, ENV variables will not be updated during runtime if you use it this way. So while it is indeed possible, please use it with care.
 
 # combining it all for all the information
 
