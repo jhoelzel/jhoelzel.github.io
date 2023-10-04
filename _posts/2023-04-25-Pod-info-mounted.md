@@ -334,7 +334,7 @@ spec:
 
 
 ```
-## mount a specific annotation as environment variable
+# mount a specific annotation as environment variable
 /E: 04.10.23
 
 One of my readers pointed out, that it is indeed possible to mount a specific annotation as an environment variable into a pod by usin the fieldPath ``metadata.annotations[yourAnnotation]`` which will be plenty usefull for directly mounting an annotation.
