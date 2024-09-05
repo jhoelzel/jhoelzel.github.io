@@ -6,8 +6,6 @@ categories: kubernetes
 tags: [ci, kubernetes-orchestration]
 ---
 
-### Gaining Total Control of Your Kubernetes Nodes with  Custom Images
-
 When managing Kubernetes clusters, ensuring that every node is secure, consistent, and optimized is crucial. We've all experienced situations where nodes behave unexpectedly due to configuration drift, outdated software, or poorly maintained base images. A powerful solution to these problems is using **custom images**—the OS-level equivalent of well-crafted container images. These images guarantee that every node you provision is identical, secure, and optimized for your workloads. In this article, we’ll dive deep into how they provide total control, enhance security, and streamline operations in Kubernetes clusters, particularly when used with RKE2.
 
 ### What Are Custom Images?
