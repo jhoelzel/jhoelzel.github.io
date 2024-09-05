@@ -140,7 +140,7 @@ While Teleport is a powerful solution, there are other tools that might be a bet
 
 ---
 
-### Conclusion
+### What does it all mean?
 
 As your Kubernetes environment grows, so does the complexity of managing access. Relying solely on Kubernetes' native RBAC can leave you vulnerable to security risks and compliance issues. Implementing an access proxy like Teleport, authentik, or another solution is essential for centralizing access control, enhancing security, and ensuring compliance.
 
