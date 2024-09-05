@@ -5,9 +5,6 @@ subtitle: Automating Helm version checks in Argo CD environments
 categories: devops
 tags: [argo, helm, kubernetes, ci/cd]
 ---
-
-### Keeping Your Helm Charts in Check with Argo Helm Versioner
-
 For anyone managing Kubernetes environments with Argo CD, keeping Helm charts up-to-date is a routine but essential task. Argo Helm Versioner is a straightforward tool that helps automate this process, ensuring your deployments stay current without adding extra overhead.
 
 ### Why Helm Chart Versioning Can Be a Headache
