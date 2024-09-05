@@ -6,8 +6,6 @@ categories: kubernetes
 tags: [automation, cli, kubernetes-probes]
 ---
 
-### `go_wait_for_k8s`: Ensuring Kubernetes Resource Readiness with InitContainers
-
 In Kubernetes, ensuring that dependent services are ready before your application starts can be a critical task. For instance, your application might rely on a PostgreSQL database, and you need to make sure the database is fully initialized and ready to accept connections before the app itself starts. Handling this properly often requires custom scripts or tools to manage readiness checks, which can get complex and error-prone.
 
 This is where `go_wait_for_k8s` comes in. Designed to run as an `InitContainer` within your Kubernetes pods, it ensures that critical dependencies are ready before your main application container starts. This approach guarantees that your application only launches when its dependencies are fully operational, making your deployments more robust and reliable.
