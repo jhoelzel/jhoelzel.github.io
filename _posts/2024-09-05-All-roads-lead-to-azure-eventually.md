@@ -6,10 +6,6 @@ categories: compliance
 tags: [teleport, kubernetes, intune, opinion, Office 365]
 ---
 
-### Kubernetes Can Run Anywhere, But Compliance Needs Central Management: A Deep Dive into Teleport, Intune, and Office 365
-
----
-
 Kubernetes is the Swiss Army knife of container orchestration. It’s versatile, flexible, and can be deployed on just about any platform—from bare metal servers at Hetzner to cloud environments like DigitalOcean. But if you’re the type who rolls your own RKE2 clusters, you know that handmade infrastructure doesn’t just save you money—it gives you better control and tighter security than you’ll ever get from a typical cloud provider. 
 
 This flexibility is crucial, especially in a multicloud world where you’re picking the best tools for the job rather than being stuck with a one-size-fits-all approach. But here’s the rub: with all this flexibility comes complexity, especially when it comes to maintaining compliance across different environments. Kubernetes is a beast when it comes to managing containers, but it doesn’t automatically solve the compliance challenges that come with a diverse infrastructure.
