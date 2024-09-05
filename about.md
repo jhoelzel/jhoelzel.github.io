@@ -20,6 +20,13 @@ I am currently offering my services as a freelancer and would be happy to discus
 
 All of this makes me an ideal candidate if you are seeking a senior-level professional who is flexible, collaborative, and hands-on. If you would like to see what I have been up to, please check the projects section on LinkedIn.
 
+## Tailored secure Kubernetes Solutions with Office 365 Integration
+I specialize in crafting custom Kubernetes environments like RKE2, k3s, rke2 and (many) more seamlessly integrated with Office 365 for optimal performance and collaboration. By leveraging Azure AD, I provide centralized identity management that simplifies security and access control. My focus extends to ensuring financial compliance with regulations such as GDPR, SOC2, and FINRA, using Microsoft’s built-in tools for encryption, audit, and data protection. The result? Scalable, secure infrastructures that balance technical agility with compliance, tailored to your business needs.
+
+I also specialize in architecting multi-cloud environments across multiple Hosters like AWS, Hetzner, Contabo, Ionos, DigitalOcean and more. By distributing production systems across multiple cloud providers—not just availability zones—security, failover, and uptime are dramatically increased. Through an access proxy, your team experiences a seamless interface, making multi-cluster management effortless and transparent. Access proxies eliminate the need for direct access to host systems, further enhancing security by controlling and monitoring connections centrally. This abstraction layer not only simplifies multi-cloud management but also generates comprehensive audit logs, offering insights into every interaction with your infrastructure. These logs are invaluable for compliance, providing a level of detailed auditability that’s often missed in traditional setups. By implementing access proxies, you maintain robust security and meet compliance requirements effortlessly, ensuring transparency and accountability across all systems.
+
+
+
 ## kubernetes experience
 
 **Kubernetes cluster types**:
