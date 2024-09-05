@@ -127,6 +127,144 @@ Custom images can be designed to be modular, allowing you to build images optimi
 #### 2. Collaboration Between DevOps and Development Teams
 Custom images help ensure that development, staging, and production environments are consistent. By embedding standard tools, libraries, and runtime environments directly into the images, you reduce the likelihood of “works on my machine” issues. This accelerates collaboration between DevOps and development teams, enabling faster debugging and fewer production issues.
 
+### 3. They life in GIT
+Custom images can easiy withstand auditing procedures by using proper GitOps practises. Environments are not only clearly built with a version history but with the use of github actions, building your image becomes an easy workflow like this:
+
+```YAML
+name: Build All DigitalOcean Snapshots
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_digitalocean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Packer
+        uses: hashicorp/setup-packer@v1
+
+      - name: Build DigitalOcean snapshots
+        run: make build-digitalocean
+        env:
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+```
+## Deep Dive: Automating Custom Kubernetes Images with Packer
+
+When managing Kubernetes clusters in any environment, using custom images ensures consistency, security, and speed during node provisioning. **HashiCorp Packer** simplifies the creation of these images, automating their build process so they can be pre-configured, secure, and Kubernetes-ready.
+
+In this chapter, we’ll walk through using Packer to build a custom **K3s** image for **DigitalOcean**, ensuring the image is optimized, hardened, and lean. This approach minimizes the need for manual node configuration, making your infrastructure more efficient and reliable.
+This is of course not an complete example, yet I think it will get the point across.
+
+#### Packer Template for DigitalOcean
+
+This template provisions a **K3s-ready** image on DigitalOcean using Ubuntu, with firewall settings, SSH hardening, and clean-up steps to ensure the image is secure and lightweight. Importantly, it includes a reset of **cloud-init** to ensure fresh configuration on new instances and of course if you like, even initialize the image itself with a cloud-config.
+
+```hcl
+source "digitalocean" "ubuntu-k3s" {
+  image       = "ubuntu-20-04-x64"
+  region      = "nyc3"
+  size        = var.instance_size
+  ssh_username = "root"
+}
+
+build {
+  name    = "ubuntu-k3s-build"
+  sources = ["source.digitalocean.ubuntu-k3s"]
+
+  provisioner "shell" {
+    inline = [
+      # Update the system and install necessary tools
+      "apt-get update -y",
+      "apt-get upgrade -y",
+      "apt-get install -y curl ufw",
+
+      # Set up firewall rules for security
+      "ufw allow OpenSSH",       # SSH access
+      "ufw allow 6443/tcp",      # K3s API port
+      "ufw allow 8472/udp",      # Flannel networking for K3s
+      "ufw allow 10250/tcp",     # Kubelet communication
+      "ufw enable",              # Enable firewall
+
+      # Disable password-based SSH for added security
+      "sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config",
+      "systemctl restart sshd",
+
+      # Install K3s (lightweight Kubernetes)
+      "curl -sfL https://get.k3s.io | sh -",
+
+    ]
+  }
+
+  # Clean up to minimize image size
+  provisioner "shell" {
+    inline = [
+      "apt-get clean",                       # Clean apt cache
+      "rm -rf /var/lib/apt/lists/*",         # Remove apt lists
+      "rm -rf /tmp/*",                       # Clean /tmp
+      "rm -rf /var/tmp/*"                    # Clean /var/tmp
+    ]
+  }
+
+  # Reset cloud-init so the image is fresh for future instances
+  provisioner "shell" {
+    inline = [
+      # Stop cloud-init to reset its state
+      "systemctl stop cloud-init",
+
+      # Clean up cloud-init logs and state to ensure new instance gets fresh initialization
+      "rm -rf /var/lib/cloud/",
+      "rm -rf /var/log/cloud-init.log /var/log/cloud-init-output.log",
+
+      # Ensure cloud-init runs on new instances
+      "touch /etc/cloud/cloud-init.disabled",   # Temporarily disable cloud-init
+      "rm /etc/cloud/cloud-init.disabled"       # Re-enable for the next boot
+    ]
+  }
+}
+```
+
+### Let's dive into the details
+
+1. **Source Configuration**:
+   - The source uses **Ubuntu 20.04** on DigitalOcean, with flexibility to select the instance size via the `var.instance_size` variable.
+   - The image is built in the **nyc3** region, and `root` is used as the SSH user during the image build process.
+
+2. **Provisioning**:
+   - **System Updates and Tools**: Updates the OS and installs essential tools like **curl** and **UFW** (firewall).
+   - **Firewall Setup**: Configures UFW to allow only required ports:
+     - **SSH (OpenSSH)**: For secure SSH access.
+     - **K3s API (6443/tcp)**: To allow K3s communication.
+     - **Flannel (8472/udp)**: For Kubernetes networking.
+     - **Kubelet (10250/tcp)**: Ensures Kubelet communication.
+   - **SSH Hardening**: Disables password-based SSH access to enforce key-based authentication, adding another layer of security.
+   - **K3s Installation**: Downloads and installs **K3s**, the lightweight Kubernetes distribution, making the node ready for your cluster.
+   - **Verification**: Confirms that K3s is installed and running by checking the node status.
+
+3. **Image Cleanup**:
+   - After provisioning, the template runs a cleanup process to remove unnecessary files, package lists, and temporary data. This step is essential for keeping the image lightweight and secure by reducing the potential attack surface and improving node performance.
+
+4. **Resetting Cloud-Init**:
+   - **Cloud-init** is reset to ensure that when a new instance is created from this image, it runs a fresh cloud-init cycle, pulling the correct instance-specific data like networking and metadata configurations.
+   - Logs and cloud-init states are wiped clean, guaranteeing that each new instance starts without residual configuration from the original build process.
+
+### Why This Template Works for Kubernetes
+
+This Packer template is designed to make **DigitalOcean** Kubernetes nodes more efficient and secure. It ensures that each node is:
+- **Pre-configured and consistent**: With all necessary software and security settings baked into the image, every node will behave the same way, reducing potential configuration drift.
+- **Hardened for security**: The template applies some security best practices, including firewall rules and SSH hardening, minimizing potential attack vectors. You can see how we can easily go even much deeper if we wanted to.
+- **Optimized for Kubernetes**: K3s is pre-installed, and the node is verified as ready to join the cluster, reducing the need for post-boot configurations.
+
+By automating the creation of custom Kubernetes images using Packer, you gain control over how your nodes are built, ensuring they are **secure**, **consistent**, and **ready to scale**. This template demonstrates how to efficiently build K3s-ready nodes that are hardened, optimized, and require minimal manual setup. By integrating Packer into your Kubernetes workflow, you can basically do what you want and also save time, increase operational security, and improve the overall efficiency of your infrastructure.
+
+#### What now?
+
+With this setup you can initialize the kubernetes node by simply providing the k3s config through cloud-init in terraform. Or through the provider API. Or even through kubernetes operators ;). 
+
 ### TLDR: Custom Images as the Backbone of Kubernetes Success
 
 In today’s fast-paced cloud-native environments, where scalability, security, and flexibility are critical, **custom images** are the backbone of successful Kubernetes deployments. By building and maintaining custom images tailored to your workloads, you ensure that your nodes are consistently configured, secure, and ready to meet the demands of production environments—whether in the cloud, at the edge, or on-prem.
