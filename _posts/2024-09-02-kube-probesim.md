@@ -5,7 +5,6 @@ subtitle: A Tool to Simulate Kubernetes Probes
 categories: kubernetes
 tags: [kubernetes-problems, cli]
 ---
-### Building Resilience with kube-probesim: A Tool to Simulate Kubernetes Probes
 
 As the creator of `kube-probesim`, I wanted to solve a specific problem: simulating how Kubernetes applications handle liveness and readiness probe failures. This tool was born out of a need to quickly replicate real-world failure conditions like random probe failures, latency spikes, and failing external dependencies in a controlled manner.
 
