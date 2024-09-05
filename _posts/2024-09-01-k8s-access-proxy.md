@@ -6,11 +6,6 @@ categories: kubernetes
 tags: [teleport, access proxy, kubernetes access]
 ---
 
-
-### If You Are Using Kubernetes, You Better Also Use an Access Proxy
-
----
-
 Kubernetes has revolutionized the way we manage and deploy applications by providing powerful tools for orchestrating containers at scale. However, as your Kubernetes environment grows, so does the complexity of managing access. Kubernetes' native Role-Based Access Control (RBAC) is essential but insufficient on its own to address the challenges of scale, security, and compliance. This is where an access proxy, such as Teleport, becomes indispensable.
 
 This post will explore why using an access proxy is critical for your Kubernetes deployment, discuss the importance of robust RBAC from the outset, and provide an in-depth look at alternatives like **authentik** and others, helping you choose the right tool for your environment.
