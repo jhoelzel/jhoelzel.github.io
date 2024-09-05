@@ -33,10 +33,14 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 ### Interesting accomplishments in Kubernetes
 
+- working with AI workloads in kubernetes
+- enabling security compliance through the use of GoTeleport and strict audit logging
+- fully "offline" but accessible through an Access Proxy clusters including Frontends linked through GoTeleport.
+- RBAC and Role assignment for a financial institution which much more finegrained access policies
 - Deployed bare-metal clusters using on-premise hardware
 - Implemented CSI-compliant bare-metal clusters
 - Integrated BGP Peer with Calico for enhanced networking
-- Configured IPV6/IPV4/dual-stack bare-metal clusters using Calico
+- Configured IPV6/IPV4/dual-stack bare-metal clusters using Calico and Cilium
 - Executed cluster-to-cluster migrations
 - Transitioned from Helm to Kustomize for resource management
 - Automated DNS and certificates management with Cert-Manager and ExternalDNS
@@ -50,49 +54,56 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 
 ## Github Excerpts
 
-1. **go-wait-for-k8s**
+1. **Argo Helm Versioner**
+   - Utility designed to help manage and maintain Argo CD Applications deployed via Helm charts.
+   - [Repository](https://github.com/jhoelzel/argo-helm-versioner)
+2. **kube-probesimr**
+   - ProbeSim is a lightweight Go application designed to simulate various failure scenarios for Kubernetes liveness and readiness probes.
+   - [Repository](https://github.com/jhoelzel/kube-probesim)
+3. **go-wait-for-k8s**
    - A utility program written in Go that monitors the readiness of Kubernetes resources like Pods, Jobs, Deployments, StatefulSets, DaemonSets, and ReplicaSets.
    - [Repository](https://github.com/jhoelzel/go_wait_for_k8s)
 
-2. **SpInvalidFileNameFinder**
+4. **SpInvalidFileNameFinder**
    - A command-line tool written in Go that helps you find and optionally rename files and folders with invalid names for SharePoint.
    - [Repository](https://github.com/jhoelzel/SpInvalidFileNameFinder)
 
-3. **Consoleman**
+5. **Consoleman**
    - A command-line utility that acts like Postman but runs in the console. You can use it to send HTTP requests to APIs and inspect the responses.
    - [Repository](https://github.com/jhoelzel/consoleman)
 
-4. **Simpleapp**
+6. **Simpleapp**
    - A simple app that defines a basic Kubernetes app used in trainings, containing a simple MVC structure for packages, a Mux subrouter integration, kube manifests, and an easy-to-learn structure.
    - [Repository](https://github.com/jhoelzel/simpleapp)
 
-5. **Auto Updating base images**
+7. **Auto Updating base images**
    - This image is based on `mcr.microsoft.com/azure-cli` and integrates `mongodb-tools` in order to easily backup databases in a production AKS.
    - [Repository](https://github.com/jhoelzel/docker-azure_cli-mongodb_tools)
 
-6. **Cronor**
+8. **Cronor**
    - A Kubernetes cron job image with one task: change a deployment depending on whether it's day or night. Showcasing how easily the Kubernetes API can be implemented directly into your code in multiple ways.
    - [Repository](https://github.com/jhoelzel/cronor)
 
-7. **Ingress and Egress with the same IP on Azure and Terraform**
+9. **Ingress and Egress with the same IP on Azure and Terraform**
    - [Repository](https://github.com/jhoelzel/aks_ingress_egress_same_ip)
 
-8. **DevContainers**
+10. **DevContainers**
    - A collection of Dockerfiles for various development environments.
    - [Repository](https://github.com/jhoelzel/devcontainer)
 
-## Latest Blog Posts 
+### 📩 Latest Blog Posts 
 <!-- BLOG-POST-LIST:START -->
-- `2023-04-25` \| [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
-- `2023-04-17` \| [Kubernetes SSO with OIDC and GitLab in k3s](https://www.hoelzel.it/kubernetes/2023/04/17/k3s-gitlab-oidc-copy.html)  
-- `2023-04-16` \| [Taming Traffic Spikes in Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/16/Kubernetes-resource-limits.html)  
-- `2023-04-15` \| [Simplifying Kubernetes Developement with Rancher Desktop](https://www.hoelzel.it/kubernetes/2023/04/15/rancher-desktop.html)  
-- `2023-04-12` \| [Controllers vs. Operators and when to use which](https://www.hoelzel.it/kubernetes/2023/04/12/Kubernetes-Operators-vs-Controller.html)  
-- `2023-04-01` \| [Comparing k3s with Kubernetes](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html)  
-- `2023-03-21` \| [Unleashing Kubernetes Full Potential with GitOps and ArgoCD](https://www.hoelzel.it/kubernetes/2023/03/21/gitops-argocd-kubernetes-a-match-made-in-heaven.html)  
-- `2023-03-10` \| [GitOps and Agile … Like Bread and Butter](https://www.hoelzel.it/gitops/2023/03/10/GitOps-and-Agile-Like-Bread-and-Butter.html)  
-- `2022-09-01` \| [Compare kustomize overlays](https://www.hoelzel.it/cli/2022/09/01/compare-kustomize-overlays.html)  
-- `2022-08-06` \| [Restarting a container without downtime](https://www.hoelzel.it/kubectl/2022/08/06/restart-pod-without-downtime.html)  
+- `2024-09-05` | [All roads will lead you to Azure](https://www.hoelzel.it/compliance/2024/09/05/All-roads-lead-to-azure-eventually.html)  
+- `2024-09-05` | [Gaining Total Control of Your Kubernetes Nodes with Custom Images](https://www.hoelzel.it/kubernetes/2024/09/05/kubernetes-custom-images.html)  
+- `2024-09-02` | [Building Resilience with kube-probesim](https://www.hoelzel.it/kubernetes/2024/09/02/kube-probesim.html)  
+- `2024-09-01` | [go_wait_for_k8s](https://www.hoelzel.it/kubernetes/2024/09/01/go-wait-for-k8s.html)  
+- `2024-09-01` | [Kuberntes Access Proxies](https://www.hoelzel.it/kubernetes/2024/09/01/k8s-access-proxy.html)  
+- `2024-08-31` | [Streamlining Helm Chart Management with Argo Helm Versioner](https://www.hoelzel.it/devops/2024/08/31/argo-helm-versioner.html)  
+- `2023-05-08` | [Demystifying etcd](https://www.hoelzel.it/kubernetes/2023/05/08/what-is-etcd.html)  
+- `2023-05-04` | [Fixing a Kubernetes Namespace Stuck in Terminating State](https://www.hoelzel.it/kubernetes/2023/05/04/fix-stuck-namespaces.html)  
+- `2023-05-01` | [Kubernetes Headless Services](https://www.hoelzel.it/kubernetes/2023/05/01/Headless-Services.html)  
+- `2023-04-25` | [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
+
 <!-- BLOG-POST-LIST:END -->
 
 ## Certifications
@@ -184,4 +195,43 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 ### You can reach me on LinkedIn
 
 [![Linkedin](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/johannes-h%C3%B6lzel)
+
+### Some pictures so its not so boring here ;)
+
+![Kubernetes](https://img.shields.io/badge/kubernetes%20-%23326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=azure-devops&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
+![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform%20-%235835CC.svg?&style=for-the-badge&logo=terraform&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
+![Ansible](https://img.shields.io/badge/ansible%20-%231A1918.svg?&style=for-the-badge&logo=ansible&logoColor=white)
+![Rancher](https://img.shields.io/badge/rancher%20-%230075A8.svg?&style=for-the-badge&logo=rancher&logoColor=white)
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Less](https://img.shields.io/badge/less-2B4C80?style=for-the-badge&logo=less&logoColor=white)
+![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=white)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![Github Actions](https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)
+![Openwrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=OpenWrt&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Raspberry-Pi](https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 
