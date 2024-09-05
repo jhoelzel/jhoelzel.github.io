@@ -241,7 +241,6 @@ build {
      - **Kubelet (10250/tcp)**: Ensures Kubelet communication.
    - **SSH Hardening**: Disables password-based SSH access to enforce key-based authentication, adding another layer of security.
    - **K3s Installation**: Downloads and installs **K3s**, the lightweight Kubernetes distribution, making the node ready for your cluster.
-   - **Verification**: Confirms that K3s is installed and running by checking the node status.
 
 3. **Image Cleanup**:
    - After provisioning, the template runs a cleanup process to remove unnecessary files, package lists, and temporary data. This step is essential for keeping the image lightweight and secure by reducing the potential attack surface and improving node performance.
