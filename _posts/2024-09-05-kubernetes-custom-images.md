@@ -6,7 +6,7 @@ categories: kubernetes
 tags: [ci, kubernetes-orchestration]
 ---
 
-When managing Kubernetes clusters, ensuring that every node is secure, consistent, and optimized is crucial. We've all experienced situations where nodes behave unexpectedly due to configuration drift, outdated software, or poorly maintained base images. A powerful solution to these problems is using **custom images**—the OS-level equivalent of well-crafted container images. These images guarantee that every node you provision is identical, secure, and optimized for your workloads. In this article, we’ll dive deep into how they provide total control, enhance security, and streamline operations in Kubernetes clusters, particularly when used with RKE2.
+When managing Kubernetes clusters, ensuring that every node is secure, consistent, and optimized is crucial. We've all experienced situations where nodes behave unexpectedly due to configuration drift, outdated software, or poorly maintained base images. A powerful solution to these problems is using **custom images**-the OS-level equivalent of well-crafted container images. These images guarantee that every node you provision is identical, secure, and optimized for your workloads. In this article, we’ll dive deep into how they provide total control, enhance security, and streamline operations in Kubernetes clusters, particularly when used with RKE2.
 
 ### What Are Custom Images?
 
@@ -39,7 +39,7 @@ By maintaining and regularly updating your own images, you ensure that every nod
 
 One of the biggest benefits of such images is the speed at which they allow you to provision new nodes. Traditional setups rely on cloud-init scripts or post-boot configuration steps, which can be slow and error-prone. If a script fails, you could end up with an incomplete node configuration, leading to instability.
 
-With custom images, all the required configurations, binaries, and tools—such as **RKE2**, container runtimes, and monitoring agents—are baked into the image. This means nodes are ready to join your cluster as soon as they boot, without the need for lengthy initialization scripts. In dynamic environments where nodes are frequently scaled up or down, this **rapid provisioning** significantly reduces operational delays.
+With custom images, all the required configurations, binaries, and tools-such as **RKE2**, container runtimes, and monitoring agents-are baked into the image. This means nodes are ready to join your cluster as soon as they boot, without the need for lengthy initialization scripts. In dynamic environments where nodes are frequently scaled up or down, this **rapid provisioning** significantly reduces operational delays.
 
 #### 4. Full Control Over Your Node Environment
 
@@ -73,7 +73,7 @@ Here’s how they were implemented:
 - **Go-Based Access Proxy**: The **Teleport Access Proxy** (written in Go) was baked into the images to provide secure, auditable access to each node. This ensured compliance with strict security and access control policies, with minimal post-deployment configuration.
 - **Fast Provisioning**: Node provisioning times were reduced to minutes, even in a highly regulated environment. With everything pre-configured in the image, nodes could immediately join the cluster without needing time-consuming cloud-init scripts or additional configuration steps.
 
-The remaining infrastructure—such as networking, firewalls, and VPCs—was managed through **Terraform**, allowing for a highly automated and consistent deployment process. This combination of custom images and Terraform greatly simplified the process of deploying compliant, secure, and scalable infrastructure.
+The remaining infrastructure-such as networking, firewalls, and VPCs-was managed through **Terraform**, allowing for a highly automated and consistent deployment process. This combination of custom images and Terraform greatly simplified the process of deploying compliant, secure, and scalable infrastructure.
 
 ### Avoiding Cloud Provider Limitations
 
@@ -113,9 +113,9 @@ As Kubernetes expands beyond traditional cloud environments into **edge computin
 
 Specialized images designed for edge environments allow Kubernetes to be deployed in remote locations with minimal infrastructure while still ensuring consistency and security.
 
-### Long-Term Strategy: Evolving Your Infrastructure 
+### Long-Term Strategy: Evolving Your Infrastructure
 
-Custom images are not just about solving today’s problems—they’re about future-proofing your Kubernetes infrastructure. As workloads evolve, compliance standards become stricter, and new technologies like **AI/ML** or **edge computing** take hold, they provide a flexible foundation that can adapt to new requirements without significant reengineering.
+Custom images are not just about solving today’s problems-they’re about future-proofing your Kubernetes infrastructure. As workloads evolve, compliance standards become stricter, and new technologies like **AI/ML** or **edge computing** take hold, they provide a flexible foundation that can adapt to new requirements without significant reengineering.
 
 #### 1. Modular and Adaptable
 Images can be designed to be modular, allowing you to build images optimized for specific workloads. For example, you might have:
@@ -260,12 +260,12 @@ By automating the creation of custom Kubernetes images using Packer, you gain co
 
 #### What now?
 
-With this setup you can initialize the kubernetes node by simply providing the k3s config through cloud-init in terraform. Or through the provider API. Or even through kubernetes operators ;). 
+With this setup you can initialize the kubernetes node by simply providing the k3s config through cloud-init in terraform. Or through the provider API. Or even through kubernetes operators ;).
 
 ### TLDR: Custom Images as the Backbone of Kubernetes Success
 
-In today’s fast-paced cloud-native environments, where scalability, security, and flexibility are critical, **custom images** are the backbone of successful Kubernetes deployments. By building and maintaining them tailored to your workloads, you ensure that your nodes are consistently configured, secure, and ready to meet the demands of production environments—whether in the cloud, at the edge, or on-prem.
+In today’s fast-paced cloud-native environments, where scalability, security, and flexibility are critical, **custom images** are the backbone of successful Kubernetes deployments. By building and maintaining them tailored to your workloads, you ensure that your nodes are consistently configured, secure, and ready to meet the demands of production environments-whether in the cloud, at the edge, or on-prem.
 
 From **fast provisioning** and **automated updates** to **resource optimization** and **enhanced resilience**, they are a powerful tool for any organization leveraging Kubernetes. When combined with automation tools like **Terraform** and integrated into a broader **DevOps** strategy and offer the control and flexibility needed to manage modern infrastructure at scale.
 
-By adopting golden images, you are not only solving the challenges of today but also preparing your infrastructure for the future—whether that involves scaling across multiple clouds, expanding to edge environments, or adopting new workloads. They give you the foundation to build a Kubernetes environment that is predictable, secure, and adaptable to the ever-changing demands of modern cloud-native applications.
+By adopting golden images, you are not only solving the challenges of today but also preparing your infrastructure for the future-whether that involves scaling across multiple clouds, expanding to edge environments, or adopting new workloads. They give you the foundation to build a Kubernetes environment that is predictable, secure, and adaptable to the ever-changing demands of modern cloud-native applications.

@@ -12,7 +12,7 @@ This is where `go_wait_for_k8s` comes in. Designed to run as an `InitContainer` 
 
 ### The Problem: Ensuring Dependencies are Ready
 
-When deploying applications that depend on other services—like a web application that requires a database or a cache—it’s crucial to ensure those services are ready before your application attempts to interact with them. If not handled properly, your application might fail to start or exhibit erratic behavior due to unavailable resources.
+When deploying applications that depend on other services-like a web application that requires a database or a cache-it’s crucial to ensure those services are ready before your application attempts to interact with them. If not handled properly, your application might fail to start or exhibit erratic behavior due to unavailable resources.
 
 For example:
 
@@ -91,7 +91,7 @@ With this setup, the `InitContainer` ensures that your application does not star
 While the PostgreSQL example is common, `go_wait_for_k8s` can be used to wait for various types of resources. Here are a few examples:
 
 - **Waiting for a Redis Pod**: Ensure that a Redis pod is ready before starting your caching service.
-  
+
   ```yaml
   initContainers:
   - name: wait-for-redis

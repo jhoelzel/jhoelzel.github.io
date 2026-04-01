@@ -14,7 +14,7 @@ For many Kubernetes developers and operators, building resilient systems require
 
 #### Why kube-probesim?
 
-When I first started using Kubernetes in production, one of the challenges was ensuring applications were resilient enough to withstand failures—especially during scale-ups, unexpected traffic spikes, or external service downtimes. Probes (liveness and readiness) play a crucial role in ensuring the stability of the system, but testing these probes in realistic scenarios is difficult. `kube-probesim` simplifies this.
+When I first started using Kubernetes in production, one of the challenges was ensuring applications were resilient enough to withstand failures-especially during scale-ups, unexpected traffic spikes, or external service downtimes. Probes (liveness and readiness) play a crucial role in ensuring the stability of the system, but testing these probes in realistic scenarios is difficult. `kube-probesim` simplifies this.
 
 Here’s what it does:
 
@@ -29,7 +29,7 @@ The goal is to empower developers and operators to test probe handling under con
 
 #### Deploying kube-probesim from GitHub Container Registry
 
-Since I’m hosting `kube-probesim` in the GitHub Container Registry, deploying it into any Kubernetes cluster is a breeze. No need to build the image yourself—just pull the container directly from the registry.
+Since I’m hosting `kube-probesim` in the GitHub Container Registry, deploying it into any Kubernetes cluster is a breeze. No need to build the image yourself-just pull the container directly from the registry.
 
 Here's how you can do it in your own environment:
 
@@ -115,6 +115,6 @@ The beauty of `kube-probesim` lies in its flexibility and how easy it is to depl
 ### Next Steps:
 - **Get the image from the [GitHub Container Registry](https://github.com/jhoelzel/kube-probesim/pkgs/container/kube-probesim).**
 - **Deploy `kube-probesim` in your staging environment, and start testing!**
-  
+
 Remember, production is unforgiving. `kube-probesim` gives you the edge by helping you identify and fix failure points *before* they cause issues for real users.
 

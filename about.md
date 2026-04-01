@@ -23,7 +23,7 @@ All of this makes me an ideal candidate if you are seeking a senior-level profes
 ## Tailored secure Kubernetes Solutions with Office 365 Integration
 I specialize in crafting custom Kubernetes environments like RKE2, k3s, rke2 and (many) more seamlessly integrated with Office 365 for optimal performance and collaboration. By leveraging Azure AD, I provide centralized identity management that simplifies security and access control. My focus extends to ensuring financial compliance with regulations such as GDPR, SOC2, and FINRA, using Microsoft’s built-in tools for encryption, audit, and data protection. The result? Scalable, secure infrastructures that balance technical agility with compliance, tailored to your business needs.
 
-I also specialize in architecting multi-cloud environments across multiple Hosters like AWS, Hetzner, Contabo, Ionos, DigitalOcean and more. By distributing production systems across multiple cloud providers—not just availability zones—security, failover, and uptime are dramatically increased. Through an access proxy, your team experiences a seamless interface, making multi-cluster management effortless and transparent. Access proxies eliminate the need for direct access to host systems, further enhancing security by controlling and monitoring connections centrally. This abstraction layer not only simplifies multi-cloud management but also generates comprehensive audit logs, offering insights into **every** interaction with your infrastructure. They are invaluable for compliance, providing a level of detailed auditability that’s often missed in traditional setups. By implementing access proxies, you maintain robust security and meet compliance requirements effortlessly, ensuring transparency and accountability across all systems.
+I also specialize in architecting multi-cloud environments across multiple Hosters like AWS, Hetzner, Contabo, Ionos, DigitalOcean and more. By distributing production systems across multiple cloud providers-not just availability zones-security, failover, and uptime are dramatically increased. Through an access proxy, your team experiences a seamless interface, making multi-cluster management effortless and transparent. Access proxies eliminate the need for direct access to host systems, further enhancing security by controlling and monitoring connections centrally. This abstraction layer not only simplifies multi-cloud management but also generates comprehensive audit logs, offering insights into **every** interaction with your infrastructure. They are invaluable for compliance, providing a level of detailed auditability that’s often missed in traditional setups. By implementing access proxies, you maintain robust security and meet compliance requirements effortlessly, ensuring transparency and accountability across all systems.
 
 
 ## kubernetes experience
@@ -97,18 +97,18 @@ I also specialize in architecting multi-cloud environments across multiple Hoste
    - A collection of Dockerfiles for various development environments.
    - [Repository](https://github.com/jhoelzel/devcontainer)
 
-### 📩 Latest Blog Posts 
+### 📩 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- `2024-09-05` [All roads will lead you to Azure](https://www.hoelzel.it/compliance/2024/09/05/All-roads-lead-to-azure-eventually.html)  
-- `2024-09-05` [Gaining Total Control of Your Kubernetes Nodes with Custom Images](https://www.hoelzel.it/kubernetes/2024/09/05/kubernetes-custom-images.html)  
-- `2024-09-02` [Building Resilience with kube-probesim](https://www.hoelzel.it/kubernetes/2024/09/02/kube-probesim.html)  
-- `2024-09-01` [go_wait_for_k8s](https://www.hoelzel.it/kubernetes/2024/09/01/go-wait-for-k8s.html)  
-- `2024-09-01` [Kuberntes Access Proxies](https://www.hoelzel.it/kubernetes/2024/09/01/k8s-access-proxy.html)  
-- `2024-08-31` [Streamlining Helm Chart Management with Argo Helm Versioner](https://www.hoelzel.it/devops/2024/08/31/argo-helm-versioner.html)  
-- `2023-05-08` [Demystifying etcd](https://www.hoelzel.it/kubernetes/2023/05/08/what-is-etcd.html)  
-- `2023-05-04` [Fixing a Kubernetes Namespace Stuck in Terminating State](https://www.hoelzel.it/kubernetes/2023/05/04/fix-stuck-namespaces.html)  
-- `2023-05-01` [Kubernetes Headless Services](https://www.hoelzel.it/kubernetes/2023/05/01/Headless-Services.html)  
-- `2023-04-25` [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)  
+- `2024-09-05` [All roads will lead you to Azure](https://www.hoelzel.it/compliance/2024/09/05/All-roads-lead-to-azure-eventually.html)
+- `2024-09-05` [Gaining Total Control of Your Kubernetes Nodes with Custom Images](https://www.hoelzel.it/kubernetes/2024/09/05/kubernetes-custom-images.html)
+- `2024-09-02` [Building Resilience with kube-probesim](https://www.hoelzel.it/kubernetes/2024/09/02/kube-probesim.html)
+- `2024-09-01` [go_wait_for_k8s](https://www.hoelzel.it/kubernetes/2024/09/01/go-wait-for-k8s.html)
+- `2024-09-01` [Kuberntes Access Proxies](https://www.hoelzel.it/kubernetes/2024/09/01/k8s-access-proxy.html)
+- `2024-08-31` [Streamlining Helm Chart Management with Argo Helm Versioner](https://www.hoelzel.it/devops/2024/08/31/argo-helm-versioner.html)
+- `2023-05-08` [Demystifying etcd](https://www.hoelzel.it/kubernetes/2023/05/08/what-is-etcd.html)
+- `2023-05-04` [Fixing a Kubernetes Namespace Stuck in Terminating State](https://www.hoelzel.it/kubernetes/2023/05/04/fix-stuck-namespaces.html)
+- `2023-05-01` [Kubernetes Headless Services](https://www.hoelzel.it/kubernetes/2023/05/01/Headless-Services.html)
+- `2023-04-25` [Embracing the Kubernetes Downward API](https://www.hoelzel.it/kubernetes/2023/04/25/Pod-info-mounted.html)
 
 <!-- BLOG-POST-LIST:END -->
 

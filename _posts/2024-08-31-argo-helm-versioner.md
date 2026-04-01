@@ -32,12 +32,12 @@ Let’s explore how this might look with some widely-used Helm charts. Suppose y
 Here's what the output might look like after running Argo Helm Versioner:
 
 ```
-Application             FilePath                                    Current Version   Latest Version   Status           
-nginx-ingress           /apps/nginx-ingress/argo-app.yaml           4.0.6             4.3.0            Update available  
-prometheus              /apps/prometheus/argo-app.yaml              14.8.0            15.4.0           Update available  
-grafana                 /apps/grafana/argo-app.yaml                 6.17.4            7.2.0            Update available  
-redis                   /apps/redis/argo-app.yaml                   15.3.1            15.4.0           Up-to-date       
-elasticsearch           /apps/elasticsearch/argo-app.yaml           7.10.1            7.12.1           Update available  
+Application             FilePath                                    Current Version   Latest Version   Status
+nginx-ingress           /apps/nginx-ingress/argo-app.yaml           4.0.6             4.3.0            Update available
+prometheus              /apps/prometheus/argo-app.yaml              14.8.0            15.4.0           Update available
+grafana                 /apps/grafana/argo-app.yaml                 6.17.4            7.2.0            Update available
+redis                   /apps/redis/argo-app.yaml                   15.3.1            15.4.0           Up-to-date
+elasticsearch           /apps/elasticsearch/argo-app.yaml           7.10.1            7.12.1           Update available
 ```
 
 In this scenario:
@@ -53,7 +53,7 @@ While Argo Helm Versioner is designed to be simple, it’s also flexible. You ca
 
 ### Practical Use Cases: A Handy Tool for Daily Operations
 
-Imagine you're managing a microservices architecture with several teams. Argo Helm Versioner can help ensure that all your services are using the most current and secure versions of Helm charts. It's not about solving world problems—it's about making your life a bit easier by automating a routine task that, left unchecked, could lead to issues down the road.
+Imagine you're managing a microservices architecture with several teams. Argo Helm Versioner can help ensure that all your services are using the most current and secure versions of Helm charts. It's not about solving world problems-it's about making your life a bit easier by automating a routine task that, left unchecked, could lead to issues down the road.
 
 ### Conclusion: A Simple Tool for a Simple Task
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simplifying Kubernetes Developement with Rancher Desktop
-subtitle: and Rising Above Docker's Shortcomings 
+subtitle: and Rising Above Docker's Shortcomings
 categories: kubernetes
 tags: [kubernetes, rancher-desktop, kubernetes-windows, automation]
 ---
@@ -13,9 +13,9 @@ In this article I would like to introduce rancher-desktop to those who dont know
 
 [Rancher Desktop](https://rancherdesktop.io/), an open-source desktop application developed by SUSE, is available for Mac, Windows, and Linux, streamlining Kubernetes and container management right on your desktop. SUSE, a global leader in innovative, reliable, and enterprise-grade open source solutions, is renowned for their expertise in Linux, Kubernetes, and cloud infrastructure.
 
-With the flexibility to choose your Kubernetes version and the ability to build, push, pull, and run container images using containerd or Moby (dockerd), Rancher Desktop is a versatile tool for professional Kubernetes engineers. 
+With the flexibility to choose your Kubernetes version and the ability to build, push, pull, and run container images using containerd or Moby (dockerd), Rancher Desktop is a versatile tool for professional Kubernetes engineers.
 
-**Say goodbye to the need for a registry for local development** — your built container images can be run by Kubernetes instantly. Shortly I will publish an article on how to use it, but I am locally developing all my kubernetes projects in a container using VS-Code Remote containers and am directly deploying them to my single node Computer.
+**Say goodbye to the need for a registry for local development** - your built container images can be run by Kubernetes instantly. Shortly I will publish an article on how to use it, but I am locally developing all my kubernetes projects in a container using VS-Code Remote containers and am directly deploying them to my single node Computer.
 
 ## Why I Choose Rancher Desktop Over Docker?
 
@@ -31,7 +31,7 @@ As of January 31, 2022, the licensing model of Docker Desktop has changed fundam
 
 Also as of this march Docker has sent an email to users with "organization" accounts on Docker Hub, **warning that their accounts and images will be deleted unless they upgrade to a paid team plan**. This has caused significant anxiety for open source maintainers who use the platform to host images for their communities. The cost of a team plan is $420 per year, which is a significant burden for many open source projects that receive little or no funding. Additionally, Docker's definition of what is allowable for their Open Source program was out of touch, ruling out anything other than spare-time projects or those wholly donated to an open-source foundation. This move by Docker highlights the funding problem in the open source community, and how companies can forget their roots once they start making significant revenue.
 
-When Docker started to **limit the pulls of public open-source images** like Go, Prometheus, and NATS, many open source projects have already moved away from Docker Hub anyway. Docker eventually acknowledged their mistake and reversed their decision to sunset their Free Team plan. 
+When Docker started to **limit the pulls of public open-source images** like Go, Prometheus, and NATS, many open source projects have already moved away from Docker Hub anyway. Docker eventually acknowledged their mistake and reversed their decision to sunset their Free Team plan.
 
 They recognized that their policy and communication were both flawed, and after listening to feedback from their community, they decided to make changes. But in my opinion the cat is already out of the bag and going back now feels a little bit like returning to an abusive ex.
 
@@ -46,7 +46,7 @@ It is intended for engineers, integrators, and enthusiasts looking to modify, ha
 This of course sounds a lot like docker, but here me out:
 
 #### Principles
-Moby follows strong principles that prioritize modularity, flexibility, and an open-minded approach to user experience. 
+Moby follows strong principles that prioritize modularity, flexibility, and an open-minded approach to user experience.
 It is open to community contributions and follows the following guidelines:
 
 - Modular: the project includes lots of components that have well-defined functions and APIs that work together.
@@ -66,7 +66,7 @@ Zero lock-in is ensured by relying solely on 100% open source components, such a
 
 ## Container Management Made Easy
 
-Rancher Desktop caters to your preferred container engine, whether it's Moby/dockerd, which utilizes the Docker CLI, or containerd, which employs nerdctl—a Docker-compatible CLI provided by the containerd project. Built on the solid foundation of Electron, Rancher Desktop simplifies user experience by wrapping other tools and leveraging a virtual machine on MacOS and Linux, or Windows Subsystem for Linux v2 on Windows systems. All you need is to download and run the application.
+Rancher Desktop caters to your preferred container engine, whether it's Moby/dockerd, which utilizes the Docker CLI, or containerd, which employs nerdctl-a Docker-compatible CLI provided by the containerd project. Built on the solid foundation of Electron, Rancher Desktop simplifies user experience by wrapping other tools and leveraging a virtual machine on MacOS and Linux, or Windows Subsystem for Linux v2 on Windows systems. All you need is to download and run the application.
 
 Since Rancher Desktop comes equipped with k3s, a lightweight certified Kubernetes distribution. With just a few clicks, you can choose your desired Kubernetes version, reset Kubernetes, or even reset Kubernetes and the entire container runtime.
 
@@ -84,7 +84,7 @@ and mount the kubeconfig on your computer. (or copy it by hand whichever your pr
 
 ``` json
 "runArgs": [
-	//kube keys 
+	//kube keys
 	 "-v",
 	"${env:HOME}${env:USERPROFILE}/.kube:/home/vscode/.kube:ro"
 ]
@@ -99,7 +99,7 @@ More veteraned readers might know of a little tool called Lens-Desktop by Mirant
 
 Therfore I am very happy to see SuSe integrate a simply dashboard into the cluster directly. It is the same Dashboard integrated into Rancher itself but super usefull for local development! And if you like to have more, you can simply run Rancher itself in your local cluster to provision external ones too. This is great for bare-metal deployments and more!
 
-[Rancher, the big one](https://www.rancher.com/), is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads. 
+[Rancher, the big one](https://www.rancher.com/), is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads.
 
 ## it's k3s!!!
 
@@ -107,7 +107,7 @@ As mentioned before, Rancher-Desktop comes with my favorite kubernetes distribut
 
 [K3S](k3s.io) is a lightweight Kubernetes distribution. It was designed to be easy to install, run, and maintain on any infrastructure, including bare-metal servers, virtual machines, and the cloud. In September 2020, k3s became a Cloud Native Computing Foundation (CNCF) project, which means ***it must pass the same software conformance tests that other CNCF-certified distributions for Kubernetes*** must pass. This ensures that configurations built for Kubernetes will work with k3s.
 
-You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html). While reading it, you can keep in mind that ***your local and your cloud cluster can now aboslutetly run on the excat same stack***. Well, sure there is some WSL involved but once you overlook the tiny performance hit, that is to be expected for a dev env, and really inevideable on windows anyway... 
+You can also find out more about it in my recent post [Comparing k3s with Kubernetes How k3s is Often the Better Choice](https://www.hoelzel.it/kubernetes/2023/04/01/k3s-is-Often-the-Better-Choice.html). While reading it, you can keep in mind that ***your local and your cloud cluster can now aboslutetly run on the excat same stack***. Well, sure there is some WSL involved but once you overlook the tiny performance hit, that is to be expected for a dev env, and really inevideable on windows anyway...
 
 ## German quality with a long positive history
 
