@@ -25,17 +25,37 @@ I specialize in crafting custom Kubernetes environments like RKE2, k3s, rke2 and
 
 I also specialize in architecting multi-cloud environments across multiple Hosters like AWS, Hetzner, Contabo, Ionos, DigitalOcean and more. By distributing production systems across multiple cloud providers-not just availability zones-security, failover, and uptime are dramatically increased. Through an access proxy, your team experiences a seamless interface, making multi-cluster management effortless and transparent. Access proxies eliminate the need for direct access to host systems, further enhancing security by controlling and monitoring connections centrally. This abstraction layer not only simplifies multi-cloud management but also generates comprehensive audit logs, offering insights into **every** interaction with your infrastructure. They are invaluable for compliance, providing a level of detailed auditability that’s often missed in traditional setups. By implementing access proxies, you maintain robust security and meet compliance requirements effortlessly, ensuring transparency and accountability across all systems.
 
+## Kubernetes Experience
 
-## kubernetes experience
+### Cluster Environments & Deployment Models
 
-**Kubernetes cluster types**:
-- AKS, Bare-metal, Edge server, EKS, Hetzner-cloud, DigitalOcean, Contabo, multi AZ, Single-Node
+* Azure Kubernetes Service (AKS)
+* Amazon Elastic Kubernetes Service (EKS)
+* Bare-metal and on-premises clusters
+* Edge-server deployments
+* Hetzner Cloud, DigitalOcean, and Contabo
+* Multi-availability-zone clusters
+* Single-node Kubernetes clusters
 
-**Distributions**:
-- Cloud Kubernetes (AKS EKS), Harvester, **RKE2**, K3S, Rancher desktop, Rancher RKE, Vanilla Kubernetes
+### Kubernetes Distributions & Platforms
 
-**Operators created**:
-- Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day, Full application livecycle deployments including RabbitMQ, Postgres, and storage
+* Managed Kubernetes: AKS and EKS
+* RKE2
+* K3s
+* Rancher Kubernetes Engine (RKE)
+* Rancher Desktop
+* Harvester
+* Upstream/vanilla Kubernetes
+
+### Custom Operators, Controllers & Automation
+
+* Developed Kubernetes admission controllers for policy enforcement and resource validation.
+* Built controllers to discover and annotate existing Kubernetes services.
+* Automated application deployment and lifecycle management.
+* Created operators for provisioning and managing MySQL databases.
+* Implemented schedule-aware deployment scaling based on time and day.
+* Developed full application lifecycle automation, including application workloads, RabbitMQ, PostgreSQL, and persistent storage, their backup and restore as well as their cross cluster movement.
+
 
 
 ### Selected Kubernetes Accomplishments
