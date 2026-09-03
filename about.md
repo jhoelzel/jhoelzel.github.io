@@ -35,28 +35,58 @@ I also specialize in architecting multi-cloud environments across multiple Hoste
 - Cloud Kubernetes (AKS EKS), Harvester, **RKE2**, K3S, Rancher desktop, Rancher RKE, Vanilla Kubernetes
 
 **Operators created**:
-- Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day
+- Admission Controllers, Annotation of existing services, Application deployments, MySQL DB deployments, Scaling of deployments depending on the time and day, Full application livecycle deployments including RabbitMQ, Postgres, and storage
 
-### Interesting accomplishments in Kubernetes
 
-- working with AI workloads in kubernetes
-- enabling security compliance through the use of GoTeleport and strict audit logging
-- fully "offline" but accessible through an Access Proxy clusters including Frontends linked through GoTeleport.
-- RBAC and Role assignment for a financial institution which much more finegrained access policies
-- Deployed bare-metal clusters using on-premise hardware
-- Implemented CSI-compliant bare-metal clusters
-- Integrated BGP Peer with Calico for enhanced networking
-- Configured IPV6/IPV4/dual-stack bare-metal clusters using Calico and Cilium
-- Executed cluster-to-cluster migrations
-- Transitioned from Helm to Kustomize for resource management
-- Automated DNS and certificates management with Cert-Manager and ExternalDNS
-- Enabled OIDC Single Sign-On (SSO) for both cluster and application access
-- Deployed VOIP applications on Kubernetes
-- Implemented GitOps using GitLab, GitHub, Bitbucket, and ArgoCD
-- Managed bare-metal ingress load balancing using HAProxy and Traefik
-- Utilized Kubecost for effective cost management
-- Managed storage and backups using Longhorn
-- Deployed ARM architecture on Hetzner for the control plane with AMD64 and ARM nodes
+### Selected Kubernetes Accomplishments
+
+#### Platform Engineering & Bare-Metal Infrastructure
+
+* Deployed production-grade Kubernetes clusters on bare-metal, on-premises hardware.
+* Implemented CSI-compliant storage integrations for bare-metal clusters.
+* Built IPv4, IPv6, and dual-stack clusters using both Calico and Cilium.
+* Deployed heterogeneous clusters on Hetzner with ARM-based control-plane nodes and mixed ARM64/AMD64 worker nodes.
+* Executed cluster-to-cluster migrations with minimal service disruption.
+
+#### Security, Identity & Compliance
+
+* Implemented zero-trust cluster access using Cloudflare Tunnel and Cloudflare Access.
+* Enabled security compliance through Teleport access controls and strict audit logging.
+* Designed isolated, effectively offline clusters that remained securely accessible through an access proxy, including proxied frontend applications.
+* Designed fine-grained Kubernetes RBAC and role-assignment policies for a financial institution.
+* Enabled OIDC-based Single Sign-On for Kubernetes clusters and hosted applications.
+* Implemented mutual TLS communication using Envoy.
+
+#### GitOps, Automation & Configuration Management
+
+* Managed cluster infrastructure, lifecycle operations, and updates entirely through GitHub Actions.
+* Implemented GitOps workflows using GitHub, GitLab, Bitbucket, Argo CD, and CI/CD pipelines.
+* Migrated Kubernetes resource management from Helm to Kustomize.
+* Automated DNS record and TLS certificate management using ExternalDNS and cert-manager.
+
+#### Networking, Ingress & Service Connectivity
+
+* Integrated Calico with BGP peers to support advanced routing and network connectivity.
+* Managed ingress and load balancing for bare-metal clusters using HAProxy VMs and Traefik.
+* Configured networking across IPv4-only, IPv6-only, and dual-stack environments.
+* Implemented secure service-to-service communication through Envoy and mutual TLS.
+
+#### Storage, Backup & Cost Management
+
+* Managed persistent storage and cluster backups using Longhorn.
+* Implemented Kubernetes cost monitoring and optimization using Kubecost.
+
+#### Observability & Operations
+
+* Implemented end-to-end monitoring, logging, and distributed tracing using the Grafana LGTM stack: Loki, Grafana, Tempo, and Mimir.
+* Established operational visibility across clusters, infrastructure, and applications.
+
+#### Specialized Workloads
+
+* Enabled and operated AI workloads on Kubernetes.
+* Deployed and managed VoIP applications on Kubernetes.
+* Working with virtual machines in k8s
+
 
 ## Github Excerpts
 
@@ -183,7 +213,7 @@ I also specialize in architecting multi-cloud environments across multiple Hoste
 - Favorites: Golang, JavaScript, PHP, C#
 - Cloud: AWS, Azure, Hetzner, OVH, Contabo, Bare-Metal
 - Databases: MySQL , MSSQL, PostgreSQL, TimeScaleDB, Redis, MongoDB
-- DevOps: Ansible, Puppet, Terraform, Argo CD, Rancher
+- DevOps: Github actions, Ansible, Puppet, Terraform, Argo CD, Rancher
 - Server: Kubernetes, k3s, K3OS, Harvester, Docker (Swarm), Bare-Metal , Serverless
 - Location Networking, VPN (Wireguard, Software, MS-VPN)
 - Jira / Redmine / Trello
